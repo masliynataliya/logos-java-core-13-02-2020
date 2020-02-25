@@ -1,4 +1,4 @@
-package javacore.lesson02.homework.denysyerchenko;
+package mikekhay;
 
 public class Example {
     public static void main(String[] args) {
