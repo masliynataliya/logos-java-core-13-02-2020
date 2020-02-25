@@ -1,4 +1,4 @@
-package javacore.lesson02.homework.pavliuk;
+package homework.pavliuk;
 
 public class Pavliuk {
         public static void main(String[] args) {

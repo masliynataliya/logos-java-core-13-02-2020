@@ -1,4 +1,4 @@
-package javacore.lesson02.homework.romanivanov;
+package homework.romanivanov;
 
 public class Roman {
     public static void main(String[] args) {
