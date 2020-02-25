@@ -2,7 +2,7 @@ package homework.katerynakikidzhan;
 
 import java.util.Random;
 
-public class ThirdTask {
+public class JC01ThirdTask {
 //    3. Створити масив, наповнити його 10 значеннями типу int
 //    знайти  максимальне та  мінімальне значення в масиві та вивести їх на консоль.
     public static void main(String[] args) {

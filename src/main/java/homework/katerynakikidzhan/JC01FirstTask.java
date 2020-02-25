@@ -1,6 +1,6 @@
 package homework.katerynakikidzhan;
 
-public class FirstTask {
+public class JC01FirstTask {
 //  Написати по одній змінній кожного типу примітивних типів даних.
     public static void main(String[] args) {
         int i;

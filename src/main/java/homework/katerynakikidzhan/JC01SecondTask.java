@@ -1,6 +1,6 @@
 package homework.katerynakikidzhan;
 
-public class SecondTask {
+public class JC01SecondTask {
 //  Вивести на консоль мінімальне і максимальне значення типів даних.
 //  Вивід здійснюється за допомогою System.out.println();  та Java Wrappers (обгортки примітивів).
     public static void main(String[] args) {
