@@ -6,12 +6,21 @@ public class ChessDesk {
         protected int coY;
         protected boolean defeat=false;
         protected boolean win=true;
+
+        public String getMove() {
+                return move;
+        }
+
+        public void setMove(String move) {
+                this.move = move;
+        }
+
         protected String color;
         protected String move;
         protected int quantity;
 
-        public void move(){
-            System.out.println("How this move? " + move );
+        public void move(String move){
+            System.out.println("How this move? " + move);
 
         }
 }
