@@ -27,5 +27,7 @@ public class Application {
 
         p1.callOtherPerson(p2);
         p2.callOtherPerson(p1);
+
+        p1.getName();
     }
 }
