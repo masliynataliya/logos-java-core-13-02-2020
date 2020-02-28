@@ -1,4 +1,4 @@
-package homework.romanivanov;
+package homework.romanivanov.basics;
 
 public class Homework2 {
     public static void main(String[] args) {
