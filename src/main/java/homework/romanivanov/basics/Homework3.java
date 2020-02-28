@@ -1,4 +1,4 @@
-package homework.romanivanov;
+package homework.romanivanov.basics;
 
 import java.util.Scanner;
 
