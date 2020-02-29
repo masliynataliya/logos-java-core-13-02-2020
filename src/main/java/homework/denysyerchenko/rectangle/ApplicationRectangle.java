@@ -1,6 +1,6 @@
 package homework.denysyerchenko.rectangle;
 
-public class application {
+public class ApplicationRectangle {
     public static void main(String[] args) {
         Rectangle rectangle1 = new Rectangle();
         rectangle1.findPerimeter(15.5, 6.5);
