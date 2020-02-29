@@ -5,14 +5,11 @@ public class Rectangle {
     public double width;
 
    public Rectangle() {
-       length = 14.5;
-       width = 6.5;
    }
-    public double getLength() {
-        return length;
-    }
 
     public void setLength(double newLength) {length = newLength;}
+
+    public void setWidth(double newWidth) {width = newWidth;}
 
    public Rectangle(double initLength, double initWidth) {
        length = initLength;
