@@ -22,12 +22,12 @@ public class Cats {
             x = a + x;
             z = b + z;
             if (x > hp) {
-                System.out.println("Первый кот победил");
+                System.out.println("Перший кіт переміг");
                 break;
 
             }
             if (z > hp) {
-                System.out.println("Второй кот победи");
+                System.out.println("Другий кіт переміг");
                 break;
 
             }
