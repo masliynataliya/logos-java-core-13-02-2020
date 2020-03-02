@@ -24,6 +24,13 @@ public class Fish {
     public Fish() {
 
     }
+    public Fish(int initSize) {
+        size = initSize;
+    }
+     public Fish(String initName, String initColor) {
+        name = initName;
+        color = initColor;
+     }
 
     @Override
     public String toString() {

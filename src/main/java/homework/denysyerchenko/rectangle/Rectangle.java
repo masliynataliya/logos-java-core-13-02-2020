@@ -5,18 +5,17 @@ public class Rectangle {
     public double width;
 
    public Rectangle() {
+       length = 22.5;
+       width = 11.0;
    }
 
-    public void setLength(double newLength) {length = newLength;}
+    public Rectangle(double initLength, double initWidth) {
+        length = initLength;
+        width = initWidth;
+    }
 
-    public void setWidth(double newWidth) {width = newWidth;}
-
-   public Rectangle(double initLength, double initWidth) {
-       length = initLength;
-       width = initWidth;
-   }
-   public void findSquare(double length, double width) {System.out.println("The square of the rectangle = " + (length * width));}
-   public void findPerimeter(double length, double width) {System.out.println("The perimeter of the rectangle = " +((length * 2) + (width *2)));}
+   public void findSquare() {System.out.println("The square of the rectangle = " + (length * width));}
+   public void findPerimeter() {System.out.println("The perimeter of the rectangle = " +((length * 2) + (width *2)));}
 
     @Override
     public String toString(){
