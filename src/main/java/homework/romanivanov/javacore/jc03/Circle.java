@@ -7,7 +7,7 @@ public class Circle {
 
     public void square1(double newDiameter){
         diameter = newDiameter;
-        double s = (Math.PI*(diameter * diameter)) / 4;
+        double s = (Math.PI*(diameter * diameter))/4;
         System.out.println("Площа кола дорівнює - " + s + "(см)^2");
 
     }
