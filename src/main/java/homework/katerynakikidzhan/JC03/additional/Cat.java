@@ -9,20 +9,17 @@ public class Cat {
     private String name;
     private int age;
     private double strength;
-    private double power;
 
     public Cat(String name, int age, double strength) {
         this.name = name;
         this.age = age;
         this.strength = strength;
-        this.power = this.age * 2 + this.strength / 3;
     }
 
     public Cat() {
         this.name = "Ginger";
         this.age = 1;
         this.strength = 19;
-        this.power = this.age * 2 + this.strength / 3;
     }
 
     public String getName() {
@@ -50,7 +47,11 @@ public class Cat {
     }
 
     public boolean attack(Cat anotherCat) {
-        return (power / 3) > (anotherCat.power / 3);
+        return power() > anotherCat.power();
+    }
+
+    public double power() {
+        return age * 2 + strength / 3;
     }
 
     @Override
@@ -59,7 +60,7 @@ public class Cat {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", strength=" + strength +
-                ", power=" + power +
+                ", power=" + power() +
                 '}';
     }
 }
