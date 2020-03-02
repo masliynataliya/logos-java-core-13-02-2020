@@ -1,4 +1,4 @@
-package homework.katerynakikidzhan;
+package homework.katerynakikidzhan.JC01;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package homework.katerynakikidzhan;
+package homework.katerynakikidzhan.JC01;
 
 public class JC01FirstTask {
 //  Написати по одній змінній кожного типу примітивних типів даних.

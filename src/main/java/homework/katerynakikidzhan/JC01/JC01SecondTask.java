@@ -1,4 +1,4 @@
-package homework.katerynakikidzhan;
+package homework.katerynakikidzhan.JC01;
 
 public class JC01SecondTask {
 //  Вивести на консоль мінімальне і максимальне значення типів даних.
