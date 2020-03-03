@@ -5,10 +5,12 @@ public class ApplicationRectangle {
 
         Rectangle myRectangle = new Rectangle();
 
-        double perimeter = myRectangle.Perimeter();
+        double perimeter = myRectangle.perimeter();
+        double area = myRectangle.area();
 
-        double area = myRectangle.Area();
+        Rectangle myRectangle2 = new Rectangle();
 
+        System.out.println("Периметр прямокутника = "+ perimeter + " , Площа прямокутника = "+ area);
         System.out.println("Периметр прямокутника = "+ perimeter + " , Площа прямокутника = "+ area);
 
     }
