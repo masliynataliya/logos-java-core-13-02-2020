@@ -1,4 +1,4 @@
-package homework.pavliuk;
+package homework.pavliuk.MyWork;
 
 public class Horse {
     private int age;

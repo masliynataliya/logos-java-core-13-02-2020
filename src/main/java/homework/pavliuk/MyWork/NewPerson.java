@@ -1,4 +1,6 @@
-package homework.pavliuk;
+package homework.pavliuk.MyWork;
+
+import homework.pavliuk.MyWork.Adress;
 
 public class NewPerson {
     private String name;
