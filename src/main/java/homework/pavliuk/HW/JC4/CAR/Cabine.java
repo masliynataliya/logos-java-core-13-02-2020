@@ -31,5 +31,5 @@ public class Cabine {
     public String toString() {
         return "___Car-Cabine___" +
                 "\nCab = " + size +
-                "\nColor = " + color;}
+                "\nColor = " + color+"1";}
 }
