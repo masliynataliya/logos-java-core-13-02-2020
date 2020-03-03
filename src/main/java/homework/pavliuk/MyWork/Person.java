@@ -1,4 +1,4 @@
-package homework.pavliuk;
+package homework.pavliuk.MyWork;
 
 import javax.naming.Name;
 import java.sql.SQLOutput;
@@ -10,10 +10,6 @@ public class Person {
     private String male = "man";
     private int number = 32394;
 
-    @Override
-    public String toString() {
-        return "Person[Name= " + name + "; Age= " + age + "; Male= " + male + " ; Nubmer= " + number;
-    }
 
     public Person() {
         System.out.println("My name is " + name);
@@ -39,6 +35,10 @@ public class Person {
     public void sayNameAge(String name, int age) {
         System.out.println("Hi, my name is " + name + " and age is " + age);
 
+    }
+    @Override
+    public String toString() {
+        return "Person[Name= " + name + "; Age= " + age + "; Male= " + male + " ; Nubmer= " + number;
     }
 }
 

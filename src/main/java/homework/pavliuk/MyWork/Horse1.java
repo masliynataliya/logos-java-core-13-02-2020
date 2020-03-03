@@ -1,4 +1,6 @@
-package homework.pavliuk;
+package homework.pavliuk.MyWork;
+
+import homework.pavliuk.MyWork.Horse;
 
 public class Horse1 extends Horse {
 
