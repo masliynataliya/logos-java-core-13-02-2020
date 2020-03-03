@@ -1,4 +1,4 @@
-package javacore.lesson02.homework.yuriirobak;
+package homework.yuriirobak;
 
 public class main {
     public static void main(String[] args) {
