@@ -7,7 +7,7 @@ public class ApplicationRectangle {
         rectangle1.findSquare();
 
         Rectangle rectangle2 = new Rectangle();
-        System.out.println("The perimeter of the rectangle2 = " + ((rectangle2.length * 2) + (rectangle2.width *2)));
-        System.out.println("The square of the rectangle2 = " + (rectangle2.length * rectangle2.width));
+        rectangle2.findPerimeter();
+        rectangle2.findSquare();
     }
 }

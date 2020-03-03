@@ -7,6 +7,6 @@ public class FirstClass {
             System.out.println(i);
             i = i +2;
         }
-        while (i <= 55);
+        while (i <= 110);
     }
 }
