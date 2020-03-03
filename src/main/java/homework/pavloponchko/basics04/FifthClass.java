@@ -1,6 +1,6 @@
 package homework.pavloponchko.basics04;
 
-public class fifthClass {
+public class FifthClass {
     public static void main(String[] args) {
         int [] Array ={8,18,29,84,0,-5,98,103,3,11};
         int max =Array[0];

@@ -2,7 +2,7 @@ package homework.pavloponchko.basics04;
 
 import java.util.Scanner;
 
-public class fourthClass {
+public class FourthClass {
     public static void main(String[] args) {
         System.out.println("Enter number a\b");
         Scanner mat=new Scanner(System.in);

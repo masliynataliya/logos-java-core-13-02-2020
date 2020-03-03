@@ -1,6 +1,6 @@
 package homework.pavloponchko.basics04;
 
-public class thirdClass {
+public class ThirdClass {
     public static void main(String[] args) {
         double n = 183;
         double s = n % 2;
