@@ -1,4 +1,4 @@
-package homework.mikekhay.HWJavaCore03.Number1;
+package homework.mikekhay.hmjavacore03.number1;
 
 public class Rectanglee
 {
