@@ -1,25 +1,17 @@
 package homework.didukhigor.homework.javacore3;
 
 public class Circle {
-    double radius;
-    double diameter;
-    double length;
-    double area;
+
+    public static void main(String[] args) {
+        double radius = 12;
+
+        double diameter= radius*2;
+
+        double length =(2*(Math.PI*radius));
 
 
-    Circle(){
-        this.radius =10;
-        this.diameter=20;
+        System.out.println("Площа кола = " +  (Math.PI*diameter*diameter)/4 + "  Довжина кола = " + length);
+
     }
-
-
-    double Diameter(){
-        return(radius*2);
-    }
-    double Area(){
-        return ((Math.PI*diameter*diameter)/4);
-    }
-    double Length(){
-       return (2*(Math.PI*radius));
-    };
 }
+
