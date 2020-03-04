@@ -10,13 +10,13 @@ public class Circle {
     }
 
 
-    double Diameter(){
+    double diameter(){
         return(radius*2);
     }
 
-    double Area(){
+    double area(){
         return ((Math.PI*diameter*diameter)/4);
     }
-    double Length(){ return (2*(Math.PI*radius));
+    double length(){ return (2*(Math.PI*radius));
     };
 }

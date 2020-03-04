@@ -7,11 +7,11 @@ public class ApplicationCircle {
 
         Circle myCircle = new Circle();
 
-        double Area = myCircle.Area();
-        double Length = myCircle.Length();
+        double area = myCircle.area();
+        double length = myCircle.length();
 
 
-        System.out.println("Площа кола = " + Area + "  Довжина кола = " + Length);
+        System.out.println("Площа кола = " + area + "  Довжина кола = " + length);
 
     }
 }
