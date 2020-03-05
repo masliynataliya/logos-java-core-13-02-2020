@@ -9,5 +9,7 @@ public class AmphibianApplication {
         frog.swim();
         frog.walk();
 
+        Amphibian frog1 = new Frog();
+
     }
 }
