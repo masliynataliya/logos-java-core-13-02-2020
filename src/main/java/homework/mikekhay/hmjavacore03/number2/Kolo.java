@@ -10,12 +10,24 @@ public class Kolo {
 
     }
     public Kolo(){
-        this.rad = 15;
+        this.rad = 4;
         this.dia = this.rad*2;
     }
-    @Override
-    public String toString(){
-        return " Площа кола = " + (Math.PI*this.dia) + " Периметр колa " + (Math.PI*(this.rad*this.rad));
+    public void Dov() {
+        System.out.println("Dovguna = " + (Math.PI*this.dia));
     }
 
+
+    public void Plo() {
+        System.out.println("Ploscha = " + (Math.PI*(this.rad*this.rad)));
+    }
+
+
+    @Override
+    public String toString() {
+        return "Kolo{" +
+                "rad=" + rad +
+                ", dia=" + dia +
+                '}';
+    }
 }

@@ -15,8 +15,20 @@ public class Rectanglee
         this.chur = 10;
     }
 
+
+    public void plo() {
+        System.out.println(" Ploscha = " + (dov * chur));
+    }
+
+    public void per() {
+        System.out.println(" Perumetr = " + (2 * (dov + chur)));
+    }
+
     @Override
     public String toString() {
-        return "Периметр прямокутника = " + ( ( this.dov + this.chur ) * 2 ) + "  Площа прямокутника = " + ( this.dov * this.chur );
+        return "Rectanglee{" +
+                "dov=" + dov +
+                ", chur=" + chur +
+                '}';
     }
 }
