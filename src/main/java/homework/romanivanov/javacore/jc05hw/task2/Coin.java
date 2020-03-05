@@ -2,7 +2,6 @@ package homework.romanivanov.javacore.jc05hw.task2;
 
 public class Coin {
     private int z ;
-    private int x ;
     boolean Reshka = false;
     boolean Orel = false;
 
@@ -10,12 +9,11 @@ public class Coin {
         System.out.println("Ви вибрали решку");
         System.out.println("Підкидується монета і випадає ...");
        Reshka = true;
-       Orel = false;
+
     }
     public void chooseOrel(){
         System.out.println("Ви вибрали орла");
         System.out.println("Підкидується монета і випадає ...");
-        Reshka = false;
         Orel = true;
     }
 
