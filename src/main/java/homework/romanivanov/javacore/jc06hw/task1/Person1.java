@@ -12,11 +12,10 @@ public class Person1  implements Salary{
     }
 
 
-    @Override
     public double getSalary() {
         return (salaryAtMonth * hoursOfWorking ) - this.taxes * daysOfWorking ;
     }
-
+    @Override
     public void salary(){
         System.out.println(getSalary());
     }

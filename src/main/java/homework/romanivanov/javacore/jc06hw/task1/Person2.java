@@ -14,11 +14,13 @@ public class Person2 implements Salary {
     }
 
 
-    @Override
+
     public double getSalary() {
         return (salaryAtHour * hoursOfWorking ) - this.taxes * daysOfWorking ;
     }
 
+
+    @Override
     public void salary(){
         System.out.println(getSalary());
     }
