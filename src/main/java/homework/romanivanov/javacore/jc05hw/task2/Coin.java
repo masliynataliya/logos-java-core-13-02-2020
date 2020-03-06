@@ -9,12 +9,14 @@ public class Coin {
         System.out.println("Ви вибрали решку");
         System.out.println("Підкидується монета і випадає ...");
        Reshka = true;
+       Orel = false;
 
     }
     public void chooseOrel(){
         System.out.println("Ви вибрали орла");
         System.out.println("Підкидується монета і випадає ...");
         Orel = true;
+        Reshka = false;
     }
 
 
