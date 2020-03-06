@@ -36,15 +36,16 @@ public class WorldMapApp {
                     proceed = false;
                     break;
                 case "2":
-                    // some logic
+                    // ask for desired horizontal direction - and return all continents on that side
                     proceed = false;
                     break;
                 case "3":
-                    // some logic
+                    // ask for previously visited continent and return another continent that have next ordinal value
+                    // if provided continent has last ordinal in enum - return first item in enum
                     proceed = false;
                     break;
                 default:
-                    System.out.printf("It is not an option. Let's try again \n\n\n");
+                    System.out.printf("It is not an option. Let's try again \n");
             }
         }
     }
