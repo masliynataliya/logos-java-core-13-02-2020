@@ -11,7 +11,9 @@
 *.sar
 *.class
 *.iml
-misc.xml
+*.idea
 
 /.idea/
 /out/production/logos-java-core-13-02-2020/META-INF/logos-java-core-13-02-2020.kotlin_module
+/.idea/
+/.out/
