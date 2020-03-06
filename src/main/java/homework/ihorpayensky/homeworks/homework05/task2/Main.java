@@ -10,7 +10,7 @@ class Main {
 
         do {
             System.out.println();
-            coin.TossTheCoin();
+            coin.tossTheCoin();
             System.out.println(" ========================================================= ");
             System.out.println(" ===== press the enter to try again or `stop` to end ===== ");
             System.out.println(" ========================================================= ");

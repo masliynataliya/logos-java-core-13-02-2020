@@ -4,10 +4,14 @@ class Main {
     public static void main(String[] args) {
         Frog frog = new Frog();
 
-        frog.eat();
-        frog.sleep();
-        frog.swim();
-        frog.walk();
-
+        method(frog);
     }
+
+    private static void method(Amphibia amphibia) {
+        amphibia.eat();
+        amphibia.sleep();
+        amphibia.swim();
+        amphibia.walk();
+    }
+
 }

@@ -25,7 +25,7 @@ class Coin {
         else return false;
     }
 
-    public void TossTheCoin() throws InterruptedException {
+    public void tossTheCoin() throws InterruptedException {
         System.out.println("Bard: Try to toss the coin, Witcher, heads or tails, but you know I like head.");
         Thread.sleep(2000);
         System.out.println("Witcher: Hmm, all right...");

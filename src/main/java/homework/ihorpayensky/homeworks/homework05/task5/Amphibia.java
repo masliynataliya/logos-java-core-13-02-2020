@@ -5,9 +5,7 @@ class Amphibia {
     public void eat() {
         System.out.println("I can eat like amphibia");
     }
-    public void sleep() {
-        System.out.println("I can sleep like amphibia");
-    }
+    public void sleep() { System.out.println("I can sleep like amphibia"); }
     public void swim() {
         System.out.println("I can eat swim amphibia");
     }
