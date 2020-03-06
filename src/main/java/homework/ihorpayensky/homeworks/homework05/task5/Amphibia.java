@@ -12,7 +12,7 @@ class Amphibia {
         System.out.println("I can eat swim amphibia");
     }
     public void walk() {
-        System.out.println("I can eat walk amphibia");
+        System.out.println("I can eat walk amphibia ");
     }
 
 }
