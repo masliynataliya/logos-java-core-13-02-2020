@@ -1,6 +1,7 @@
 package homework.romanivanov.javacore.jc05hw.task4;
 
 public class Class1 {
+
     String name;
     int x;
     int y;
@@ -8,6 +9,7 @@ public class Class1 {
     public Class1(String name){
        x = 1;
        y = 1;
+       this.name = name;
     }
     public Class1(int y, int x){
         this("Name");
@@ -17,6 +19,11 @@ public class Class1 {
     public Class1(String name, int x){
         this(3,4);
         this.name = name;
+        this.x = x;
     }
+
+
+
+
 
 }
