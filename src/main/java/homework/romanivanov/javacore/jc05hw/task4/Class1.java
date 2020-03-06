@@ -3,24 +3,27 @@ package homework.romanivanov.javacore.jc05hw.task4;
 public class Class1 {
 
     String name;
+    String color;
     int x;
     int y;
+    public Class1(){
 
-    public Class1(String name){
-       x = 1;
-       y = 1;
-       this.name = name;
     }
-    public Class1(int y, int x){
-        this("Name");
-        this.y = y;
-        this.x = x;
+    public Class1(int x, int y){
+       this.x = x;
+       this.y = y;
     }
-    public Class1(String name, int x){
-        this(3,4);
+    public Class1(int x, int y, String name){
+        this(x, y);
         this.name = name;
-        this.x = x;
     }
+    public Class1(String name,String color, int x, int y){
+        this(x, y, name);
+        this.color = color;
+    }
+
+
+
 
 
 

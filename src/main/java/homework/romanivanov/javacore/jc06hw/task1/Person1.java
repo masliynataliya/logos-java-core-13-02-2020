@@ -1,19 +1,23 @@
 package homework.romanivanov.javacore.jc06hw.task1;
 
 public class Person1  implements Salary{
-    private double hoursOfDay;
-    private double daysOfWork;
+    private double hoursOfWorking;
+    private double taxes = 500;
+    private double daysOfWorking;
+    private final double salaryAtMonth = 1000000;
 
+    public Person1(double hoursOfWorking, double daysOfWorking) {
+        this.hoursOfWorking = hoursOfWorking;
+        this.daysOfWorking = daysOfWorking;
+    }
 
 
     @Override
-    public void Salary(double hoursOfDay, double daysOfWork) {
-        this.hoursOfDay = hoursOfDay;
-        this.daysOfWork = daysOfWork;
-        double money = (hoursOfDay  * daysOfWork) * 42;
-        System.out.printf("\nПрацівник заробить %s гривень",  money);
-
-
+    public double getSalary() {
+        return (salaryAtMonth * hoursOfWorking ) - this.taxes * daysOfWorking ;
     }
 
+    public void salary(){
+        System.out.println(getSalary());
+    }
 }
