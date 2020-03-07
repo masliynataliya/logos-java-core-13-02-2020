@@ -1,6 +1,6 @@
 package homework.nazzario.oldhw;
 
-public class minusss {
+public class Minusss {
     public static class Main {
 
         public static void main(String[] args) {

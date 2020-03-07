@@ -3,7 +3,7 @@ package homework.nazzario.oldhw;
 import java.util.Random;
 import java.util.Scanner;
 
-public class randomize {
+public class Randomize {
 
     public static class Main {
         //    5. Створіть масив, наповніть його даниими в хаотичному порядку, знайдіть найбільше та найменше значення масиву.

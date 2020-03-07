@@ -2,7 +2,7 @@ package homework.nazzario.oldhw;
 
 import java.util.Scanner;
 
-public class number10 {
+public class Number10 {
 
 
 
