@@ -20,17 +20,10 @@ public class Rectangle {
     double perimeter() {
         return (length * 2) + (width * 2);
     }
-    double perimeter2() {
-        return (length * 2) + (width * 2);
-    }
 
     double area() {
         return length * width;
     }
-    double area2() {
-        return length * width; }
-
 
 }
-
 
