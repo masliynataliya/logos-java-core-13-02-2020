@@ -1,4 +1,4 @@
-package homework.nazzario.Continental;
+package homework.nazzario.continents;
 
 public enum HorizontalDirections {
     West,

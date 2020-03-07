@@ -1,10 +1,10 @@
-package homework.nazzario.Continental;
+package homework.nazzario.continents;
 
 
-import static homework.nazzario.Continental.HorizontalDirections.East;
-import static homework.nazzario.Continental.HorizontalDirections.West;
-import static homework.nazzario.Continental.VerticalDirections.North;
-import static homework.nazzario.Continental.VerticalDirections.South;
+import static homework.nazzario.continents.HorizontalDirections.East;
+import static homework.nazzario.continents.HorizontalDirections.West;
+import static homework.nazzario.continents.VerticalDirections.North;
+import static homework.nazzario.continents.VerticalDirections.South;
 
 public enum Continents {
     Australia(South, East),
