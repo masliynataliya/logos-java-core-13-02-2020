@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class PairNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int number = Integer.parseInt(scanner.nextLine());
-        if (number % 2 == 0) {
-            System.out.println("Є парне");
-        } else {
-            System.out.println("Не є парне");
-        }
+        String  number = scanner.nextLine();
+        if(number.matches("^[-,0-9]*$")) {
+            int z = Integer.parseInt(number);
+            if (z % 2 == 0) {
+                System.out.println("Є парне");
+            } else {
+                System.out.println("Не є парне");
+            }
+        }else System.out.println("Ви ввели погане значення");
 
     }
 

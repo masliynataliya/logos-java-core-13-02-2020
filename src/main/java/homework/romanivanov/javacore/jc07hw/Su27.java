@@ -13,17 +13,16 @@ public class Su27 extends Plane implements PlaneCapability {
     }
 
     public void moveUP(){
-        int up = planeControl.moveUp();
+      planeControl.moveUp();
 
     }
     public void moveDOWN(){
-        int down = planeControl.moveDown();
+         planeControl.moveDown();
     }
     public void moveLEFT(){
-        int left =planeControl.moveLeft();
+        planeControl.moveLeft();
     }
-    public void moveRIGHT(){
-        int right = planeControl.moveRight();
+    public void moveRIGHT(){ planeControl.moveRight();
     }
 
 
@@ -31,6 +30,7 @@ public class Su27 extends Plane implements PlaneCapability {
     @Override
     public void stealthMode() {
         int stealth =(int) ( 2 + Math.random() * 9);
+        System.out.println("Літак переходить в режим стелсу на " + stealth + " хвилин");
 
 
     }
@@ -38,6 +38,7 @@ public class Su27 extends Plane implements PlaneCapability {
     @Override
     public void turboMode() {
         double turbo = this.maxSpeed * (5 + Math.random() * 5);
+        System.out.println("Літак переходить в режими турбо прискорення зі швидкістю " + turbo);
 
 
     }
@@ -45,6 +46,7 @@ public class Su27 extends Plane implements PlaneCapability {
     @Override
     public void nuclear() {
         int bomb = (int) (1 + Math.random() * 10);
+        System.out.println("Літак скидує "+ bomb + " бомб");
 
     }
 }

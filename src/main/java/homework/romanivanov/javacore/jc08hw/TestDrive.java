@@ -6,6 +6,7 @@ public class TestDrive {
     public static void main(String[] args) {
         boolean go = true;
         Month[] month = Month.values();
+        Seasons[] season = Seasons.values();
         info();
         while (go) {
             System.out.println("Введіть опцію, що ви хочете зробити");
@@ -13,36 +14,36 @@ public class TestDrive {
             String choose = sc.nextLine();
 
 
-
             switch (choose) {
                 case "1":
                     System.out.println("Введіть місяць");
-                    boolean b = true;
                     String name = sc.nextLine().toUpperCase();
-                    Month month1 = Month.valueOf(name);
+                    int j = 0;
                     for (Month c : month) {
-                        if (month1.equals(c)) {
+                        if (name.equals(c)) {
                             System.out.println(name + " Існує");
-                            b = false;
+                            j++;
                         }
                     }
-                    if (b) {
+                    if (j == 0) {
                         System.out.println("Такого місяця не існує");
                     }
                     break;
 
                 case "2":
-                    System.out.println("Введіть пору року");
+                    System.out.println("Введіть місяць");
                     String season1 = sc.nextLine().toUpperCase();
-                    Seasons seasons = Seasons.valueOf(season1);
                     int count = 0;
                     for (Month c : month) {
-                        if (seasons.equals(c.getSeasons())) {
-                            System.out.println(c.name());
+                        if (season1.equals(c.name())) {
+                            Seasons seasons2 = c.getSeasons();
+                            for (Month k : month) {
+                                if (seasons2.equals(k.getSeasons())) {
+                                    System.out.println(k.name());
+                                }
+                            }
                             count++;
-
                         }
-
                     }
                     if (count == 0) {
                         System.out.println("Ганьба");
@@ -50,106 +51,120 @@ public class TestDrive {
                     break;
 
                 case "3":
-                    System.out.println("Введіть кількість днів");
-                    int days = Integer.parseInt(sc.nextLine());
-                    if (checkValidDays(days)) {
-                        for (Month c : month) {
-                            if (c.getDays() == days) {
-                                System.out.println(c);
+                    System.out.println("Введіть місяць");
+                    String monthDays = sc.nextLine().toUpperCase();
+                    int count1 = 0;
+                    for (Month c : month) {
+                        if (monthDays.equals(c.name())) {
+                            int monthDays1 = c.getDays();
+                            for (Month k : month) {
+                                if (monthDays1 == k.days) {
+                                    System.out.println(k.name());
+                                    count1++;
+                                }
                             }
                         }
-                    } else System.out.println("Немає місяців з такою кількістю днів");
+
+                    }
+                    if (count1 == 0) {
+                        System.out.println("Не існує таких місяців");
+                    }
+
+
                     break;
                 case "4":
-                    System.out.println("Введіть кількість днів ");
-                    int daysLess = Integer.parseInt(sc.nextLine());
-                    if (daysLess > 28) {
-                        for (Month c : month) {
-                            if (c.getDays() < daysLess) {
-                                System.out.println(c);
+                    System.out.println("Введіть місяць");
+                    String monthDaysLess = sc.nextLine().toUpperCase();
+                    int count2 = 0;
+                    for (Month c : month) {
+                        if (monthDaysLess.equals(c.name())) {
+                            int monthDaysLess1 = c.getDays();
+                            for (Month k : month) {
+                                if (monthDaysLess1 > k.days) {
+                                    System.out.println(k.name());
+                                    count2++;
+                                }
                             }
                         }
-                    } else System.out.println("Немає таких місяців ");
+
+                    }
+                    if (count2 == 0) {
+                        System.out.println("Не існує таких місяців");
+                    }
                     break;
-
                 case "5":
-                    System.out.println("Введіть кількість днів ");
-                    int daysMore = Integer.parseInt(sc.nextLine());
-                    if (daysMore<32) {
-                        for (Month c : month) {
-                            if (c.getDays() > daysMore) {
-                                System.out.println(c);
+                    System.out.println("Введіть місяць");
+                    String monthDaysMore = sc.nextLine().toUpperCase();
+                    int count3 = 0;
+                    for (Month c : month) {
+                        if (monthDaysMore.equals(c.name())) {
+                            int monthDaysMore1 = c.getDays();
+                            for (Month k : month) {
+                                if (monthDaysMore1 < k.days) {
+                                    System.out.println(k.name());
+                                    count3++;
+                                }
                             }
-
                         }
 
-                    } else System.out.println("Немає таких місяців ");
+                    }
+                    if (count3 == 0) {
+                        System.out.println("Не існує таких місяців");
+                    }
                     break;
                 case "6":
                     System.out.println("Введіть пору року");
-                    String season2 = sc.nextLine().toUpperCase();
-                    if (Seasons.AUTUMN.name().equals(season2)) {
-                        System.out.println(Seasons.WINTER.name());
-                    } else if (Seasons.SPRING.name().equals(season2)) {
-                        System.out.println(Seasons.SUMMER.name());
-                    } else if (Seasons.SUMMER.name().equals(season2)) {
-                        System.out.println(Seasons.AUTUMN.name());
-                    } else if (Seasons.WINTER.name().equals(season2)) {
-                        System.out.println(Seasons.SPRING.name());
-                    } else {
-                        System.out.println("Немає такої пори");
-                    }
+                    Seasons[] seasons = Seasons.values();
+                    int index = Seasons.valueOf(sc.nextLine().toUpperCase())
+                            .ordinal() + 1;
+                    if (index > seasons.length - 1) index = 0;
+                    System.out.println(seasons[index]);
+
+
                     break;
 
 
-                case"7":
+                case "7":
                     System.out.println("Введіть пору року");
-                    String season3 = sc.nextLine().toUpperCase();
-                    if (Seasons.AUTUMN.name().equals(season3)) {
-                        System.out.println(Seasons.SUMMER.name());
-                    } else if (Seasons.SPRING.name().equals(season3)) {
-                        System.out.println(Seasons.WINTER.name());
-                    } else if (Seasons.SUMMER.name().equals(season3)) {
-                        System.out.println(Seasons.SPRING.name());
-                    } else if (Seasons.WINTER.name().equals(season3)) {
-                        System.out.println(Seasons.AUTUMN.name());
-                    } else {
-                        System.out.println("Немає такої пори");
-                    }
+                    Seasons[] seasons1 = Seasons.values();
+                    int index1 = Seasons.valueOf(sc.nextLine().toUpperCase())
+                            .ordinal() - 1;
+                    if (index1 == -1) index1 = seasons1.length - 1;
+                    System.out.println(seasons1[index1]);
                     break;
                 case "8":
-                        for (Month c : month) {
-                            if (c.getDays() % 2 == 0) {
-                                System.out.println(c);
-                            }
+                    for (Month c : month) {
+                        if (c.getDays() % 2 == 0) {
+                            System.out.println(c);
                         }
+                    }
 
                     break;
                 case "9":
-                        for (Month c : month) {
-                            if (c.getDays() % 2 == 1) {
-                                System.out.println(c);
-                            }
+                    for (Month c : month) {
+                        if (c.getDays() % 2 == 1) {
+                            System.out.println(c);
+                        }
                     }
                     break;
-                case"10":
+                case "10":
                     System.out.println("Введіть місяць");
                     String monthPair = sc.nextLine().toUpperCase();
                     Month month2 = Month.valueOf(monthPair);
                     for (Month c : month) {
-                        if (month2.equals(c)){
-                            if(c.getDays()%2==0){
+                        if (month2.equals(c)) {
+                            if (c.getDays() % 2 == 0) {
                                 System.out.println(c + " Має парну кількість днів");
-                            }else System.out.println(c + " Не має парну кількість днів");
+                            } else System.out.println(c + " Не має парну кількість днів");
 
                         }
 
                     }
                     break;
-                case"11":
+                case "11":
                     info();
                     break;
-                case"12":
+                case "12":
                     go = false;
                     break;
 
@@ -161,11 +176,8 @@ public class TestDrive {
 
     }
 
-    public static boolean checkValidDays(int days) {
-        return days > 29 && days < 32;
-    }
 
-    public static void info(){
+    public static void info() {
         System.out.println("1 - Перевірка чи є такий місяць");
         System.out.println("2 - Вивести всі місяці з такою ж порою року");
         System.out.println("3 - Вивести всі місяці які мають таку саму кількість днів");
@@ -179,5 +191,4 @@ public class TestDrive {
         System.out.println("11 - Меню");
         System.out.println("12 - Завершення роботи");
     }
-
 }
