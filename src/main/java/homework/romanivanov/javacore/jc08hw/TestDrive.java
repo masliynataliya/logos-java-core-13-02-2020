@@ -7,6 +7,8 @@ public class TestDrive {
         boolean go = true;
         Month[] month = Month.values();
         Seasons[] season = Seasons.values();
+        final String enterMonth = "Введіть місяць";
+        final String error = "Такого(их) місяця(ів) не існує";
         info();
         while (go) {
             System.out.println("Введіть опцію, що ви хочете зробити");
@@ -16,7 +18,7 @@ public class TestDrive {
 
             switch (choose) {
                 case "1":
-                    System.out.println("Введіть місяць");
+                    System.out.println(enterMonth);
                     String name = sc.nextLine().toUpperCase();
                     int j = 0;
                     for (Month c : month) {
@@ -26,12 +28,12 @@ public class TestDrive {
                         }
                     }
                     if (j == 0) {
-                        System.out.println("Такого місяця не існує");
+                        System.out.println(error);
                     }
                     break;
 
                 case "2":
-                    System.out.println("Введіть місяць");
+                    System.out.println(enterMonth);
                     String season1 = sc.nextLine().toUpperCase();
                     int count = 0;
                     for (Month c : month) {
@@ -46,12 +48,12 @@ public class TestDrive {
                         }
                     }
                     if (count == 0) {
-                        System.out.println("Ганьба");
+                        System.out.println(error);
                     }
                     break;
 
                 case "3":
-                    System.out.println("Введіть місяць");
+                    System.out.println(enterMonth);
                     String monthDays = sc.nextLine().toUpperCase();
                     int count1 = 0;
                     for (Month c : month) {
@@ -67,13 +69,13 @@ public class TestDrive {
 
                     }
                     if (count1 == 0) {
-                        System.out.println("Не існує таких місяців");
+                        System.out.println(error);
                     }
 
 
                     break;
                 case "4":
-                    System.out.println("Введіть місяць");
+                    System.out.println(enterMonth);
                     String monthDaysLess = sc.nextLine().toUpperCase();
                     int count2 = 0;
                     for (Month c : month) {
@@ -89,11 +91,11 @@ public class TestDrive {
 
                     }
                     if (count2 == 0) {
-                        System.out.println("Не існує таких місяців");
+                        System.out.println(error);
                     }
                     break;
                 case "5":
-                    System.out.println("Введіть місяць");
+                    System.out.println(enterMonth);
                     String monthDaysMore = sc.nextLine().toUpperCase();
                     int count3 = 0;
                     for (Month c : month) {
@@ -109,16 +111,23 @@ public class TestDrive {
 
                     }
                     if (count3 == 0) {
-                        System.out.println("Не існує таких місяців");
+                        System.out.println(error);
                     }
                     break;
                 case "6":
                     System.out.println("Введіть пору року");
                     Seasons[] seasons = Seasons.values();
+                    int count4 = 0;
                     int index = Seasons.valueOf(sc.nextLine().toUpperCase())
                             .ordinal() + 1;
-                    if (index > seasons.length - 1) index = 0;
+                    if (index > seasons.length - 1) {
+                        index = 0;
+                        count4++;
+                    }
                     System.out.println(seasons[index]);
+                    if (count4==0)
+                    System.out.println("Такої пори року не існує");
+
 
 
                     break;
@@ -129,8 +138,12 @@ public class TestDrive {
                     Seasons[] seasons1 = Seasons.values();
                     int index1 = Seasons.valueOf(sc.nextLine().toUpperCase())
                             .ordinal() - 1;
+                    int count5 = 0;
                     if (index1 == -1) index1 = seasons1.length - 1;
                     System.out.println(seasons1[index1]);
+                    count5++;
+                    if (count5 == 0);
+                    System.out.println("Такої пори року не існує");
                     break;
                 case "8":
                     for (Month c : month) {
@@ -148,18 +161,25 @@ public class TestDrive {
                     }
                     break;
                 case "10":
-                    System.out.println("Введіть місяць");
+                    System.out.println(enterMonth);
                     String monthPair = sc.nextLine().toUpperCase();
                     Month month2 = Month.valueOf(monthPair);
+                    int count6 = 0;
                     for (Month c : month) {
                         if (month2.equals(c)) {
                             if (c.getDays() % 2 == 0) {
                                 System.out.println(c + " Має парну кількість днів");
-                            } else System.out.println(c + " Не має парну кількість днів");
+                                count6++;
+                            } else{
+                                System.out.println(c + " Не має парну кількість днів");
+                                count6++;
+                            }
 
                         }
 
                     }
+                    if (count6==0);
+                    System.out.println(error);
                     break;
                 case "11":
                     info();
@@ -172,6 +192,7 @@ public class TestDrive {
 
 
         }
+
 
 
     }
@@ -191,4 +212,5 @@ public class TestDrive {
         System.out.println("11 - Меню");
         System.out.println("12 - Завершення роботи");
     }
+
 }
