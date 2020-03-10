@@ -32,7 +32,7 @@ public abstract class Bomber {
         return ("The engine wil start in " + getRandomIntegerBetweenRange2(minTime, maxTime) + " seconds");
     }
     String takeOff() {
-        return ("The bomber can take " + getRandomIntegerBetweenRange3(minKm, maxKm) + " with a full tank");
+        return ("The bomber can take " + (int)(getRandomIntegerBetweenRange3(minKm, maxKm)) + " km with a full tank");
     }
     String landing() {
         return ("The bomber is going to land");
