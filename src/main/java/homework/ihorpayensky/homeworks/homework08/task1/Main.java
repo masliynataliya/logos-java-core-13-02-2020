@@ -25,22 +25,22 @@ class Main {
                 System.out.println(Months.valueOf(month));
                 break;
             case 2:
-                for (var e: Months.values())
+                for (Months e: Months.values())
                     if (e.getSeason().equals(Months.valueOf(month).getSeason()))
                         System.out.println(e);
                 break;
             case 3:
-                for (var e: Months.values())
+                for (Months e: Months.values())
                     if (e.getDay() == Months.valueOf(month).getDay())
                         System.out.println(e);
                 break;
             case 4:
-                for (var e: Months.values())
+                for (Months e: Months.values())
                     if (e.getDay() > Months.valueOf(month).getDay())
                         System.out.println(e);
                 break;
             case 5:
-                for (var e: Months.values())
+                for (Months e: Months.values())
                     if (e.getDay() < Months.valueOf(month).getDay())
                         System.out.println(e);
                 break;
@@ -55,12 +55,12 @@ class Main {
                         System.out.println(Months.values()[ i == 0 ? Months.values().length-1 : (i-1)%12]);
                 break;
             case 8:
-                for (var e: Months.values())
+                for (Months e: Months.values())
                     if (e.getDay() %2 == 0)
                         System.out.println(e);
                 break;
             case 9:
-                for (var e: Months.values())
+                for (Months e: Months.values())
                     if (e.getDay() %2 != 0)
                         System.out.println(e);
                 break;

@@ -9,7 +9,7 @@ class Main {
                 new Dog()
         };
 
-        for (var e: pets) {
+        for (Pet e: pets) {
             e.voice();
         }
 

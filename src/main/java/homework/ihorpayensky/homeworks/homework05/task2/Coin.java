@@ -1,7 +1,5 @@
 package homework.ihorpayensky.homeworks.homework05.task2;
 
-import jdk.dynalink.linker.LinkerServices;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -18,7 +16,7 @@ class Coin {
         List<String> temp = new ArrayList<String>();
         temp.add(this.head);
         temp.add(this.tail);
-        var lack = temp.get(r.nextInt( 2));
+        String lack = temp.get(r.nextInt( 2));
 
         if (lack.equals("Head"))
             return true;
