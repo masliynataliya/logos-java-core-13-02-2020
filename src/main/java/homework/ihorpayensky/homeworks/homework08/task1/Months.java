@@ -17,7 +17,6 @@ enum Months {
     private int day;
     private Seasons season;
 
-    Months() {}
     Months(int day, Seasons seasons) {
         this.day = day;
         this.season = seasons;
@@ -26,7 +25,6 @@ enum Months {
     public int getDay() {
         return day;
     }
-
     public Seasons getSeason() {
         return season;
     }

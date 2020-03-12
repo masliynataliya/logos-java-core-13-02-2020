@@ -6,14 +6,15 @@ class Main {
     public static void main(String[] args) {
         try {
             System.out.print("Введіть число: ");
-            Scanner s = new Scanner(System.in);
+            int s = new Scanner(System.in).nextInt();
 
-            if (s.hasNextBigInteger() && s.nextInt()%2 == 0)
-                System.out.println("Це число ціле і парне");
-            else System.out.println("EXCEPTION)");
+            if (s%2 == 0)
+                System.out.println("Це число парне");
+            else
+                System.out.println("Це число непарне");
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error!)");
         }
     }
 }
