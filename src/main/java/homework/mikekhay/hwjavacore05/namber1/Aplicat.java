@@ -1,10 +1,10 @@
 package homework.mikekhay.hwjavacore05.namber1;
 
-public class Aplicator {
+public class Aplicat {
     public static void main(String[] args) {
-        Cow a = new Cow();
-        Cat b = new Cat();
-        Dow c= new Dow();
+        Coww a = new Coww();
+        Catt b = new Catt();
+        Doww c= new Doww();
 
         a.voice();
         b.voice();

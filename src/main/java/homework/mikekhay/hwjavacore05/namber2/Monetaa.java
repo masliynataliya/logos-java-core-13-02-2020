@@ -1,6 +1,6 @@
 package homework.mikekhay.hwjavacore05.namber2;
 
-public class Moneta {
+public class Monetaa {
 
     public static void main(String args[]){
         double a =Math.random();
