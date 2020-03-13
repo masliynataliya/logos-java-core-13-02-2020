@@ -4,9 +4,9 @@ public class Circle {
 
     double radius = 12;
 
-    double diameter= radius*2;
+    public double diameter(){return radius*2;}
 
-    double length =(2*(Math.PI*radius));
+    public double length(){return (2*(Math.PI*radius));}
 
     }
 

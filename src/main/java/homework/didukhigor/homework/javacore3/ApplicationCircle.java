@@ -5,8 +5,8 @@ public class ApplicationCircle {
 
         Circle myCircle = new Circle();
 
-        double diameter = myCircle.diameter;
-        double length = myCircle.length;
+        double diameter = myCircle.diameter();
+        double length = myCircle.length();
 
         System.out.println("Площа кола = " + (Math.PI * diameter * diameter) / 4 + "  Довжина кола = " + length);
 
