@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal animal = new Animal("Cat",2,14);
+        Animal animal = new Animal("Cat",2,14.4);
 
          System.out.println("Name of animal=  "+ animal.getName()+"  age of animal= "+ animal.getAge()+"   speed of animal= "
                  + animal.getSpeed()+"\n-------------------------------------------------------------------------------------");
