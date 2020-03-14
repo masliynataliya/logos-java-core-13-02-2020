@@ -62,6 +62,7 @@ public class MonthApp {
                         System.out.println(months[counter4]);
                     }
                 }
+                break;
             case 5:
                 System.out.println("Enter desired month");
                 String desiredMonth5 = monthScanner.nextLine();
@@ -72,6 +73,7 @@ public class MonthApp {
                         System.out.println(months[counter5]);
                     }
                 }
+                break;
             case 6:
                 System.out.println("Enter desired month");
                 String desiredMonth6 = monthScanner.nextLine();
