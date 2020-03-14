@@ -1,3 +1,7 @@
+/*
+Copyright  Logos it academy. all rights reserved.
+LOGOS IY ACADEMY PROPRIETARY/CONFIDENTIAL.
+ */
 package homework.romanivanov.javacore.jc08hw;
 
 import java.util.Scanner;
@@ -9,14 +13,18 @@ public class TestDrive {
         Seasons[] season = Seasons.values();
         final String enterMonth = "Введіть місяць";
         final String error = "Такого(их) місяця(ів) не існує";
-        info();
-        while (go) {
+        info();//метод, який містить в собі всю інформацію про, можливі дії в програмі
+        while (go) { //цикл для того щоб програма використовувалась завжди, поки її самі не закінчать
             System.out.println("Введіть опцію, що ви хочете зробити");
             Scanner sc = new Scanner(System.in);
             String choose = sc.nextLine();
+            if (choose.matches("^[0-9]*$")) { //перевірка
+
+            } else throw new WrongInputConsoleParamatersException();
+            //якщо не підходить введений тип даних, викидує помилку
 
 
-            switch (choose) {
+            switch (choose) {//switch/case для всього функціоналу
                 case "1":
                     System.out.println(enterMonth);
                     String name = sc.nextLine().toUpperCase();
@@ -125,9 +133,8 @@ public class TestDrive {
                         count4++;
                     }
                     System.out.println(seasons[index]);
-                    if (count4==0)
-                    System.out.println("Такої пори року не існує");
-
+                    if (count4 == 0)
+                        System.out.println("Такої пори року не існує");
 
 
                     break;
@@ -142,7 +149,7 @@ public class TestDrive {
                     if (index1 == -1) index1 = seasons1.length - 1;
                     System.out.println(seasons1[index1]);
                     count5++;
-                    if (count5 == 0);
+                    if (count5 == 0) ;
                     System.out.println("Такої пори року не існує");
                     break;
                 case "8":
@@ -170,7 +177,7 @@ public class TestDrive {
                             if (c.getDays() % 2 == 0) {
                                 System.out.println(c + " Має парну кількість днів");
                                 count6++;
-                            } else{
+                            } else {
                                 System.out.println(c + " Не має парну кількість днів");
                                 count6++;
                             }
@@ -178,21 +185,20 @@ public class TestDrive {
                         }
 
                     }
-                    if (count6==0);
+                    if (count6 == 0) ;
                     System.out.println(error);
                     break;
                 case "11":
-                    info();
+                    info();//викликає інформацію
                     break;
                 case "12":
-                    go = false;
+                    go = false;//закінчую цикл
                     break;
 
             }
 
 
         }
-
 
 
     }
