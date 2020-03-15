@@ -1,4 +1,4 @@
-package homework.didukhigor.homework.javacore5;
+package homework.didukhigor.homework.javacore5.pet;
 
 public class Cat extends Pet {
 

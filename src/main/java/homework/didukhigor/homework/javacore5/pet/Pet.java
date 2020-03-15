@@ -1,4 +1,4 @@
-package homework.didukhigor.homework.javacore5;
+package homework.didukhigor.homework.javacore5.pet;
 
 abstract class Pet {
     public abstract void voice();

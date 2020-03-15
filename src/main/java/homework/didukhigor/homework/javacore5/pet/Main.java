@@ -1,9 +1,5 @@
 package homework.didukhigor.homework.javacore5.pet;
 
-import homework.didukhigor.homework.javacore5.Cat;
-import homework.didukhigor.homework.javacore5.Cow;
-import homework.didukhigor.homework.javacore5.Dog;
-
 public class Main {
 
     public static void main(String[] args) {
