@@ -34,15 +34,18 @@ public class Car {
 
     public Helm getHelm() { return helm; }
 
-    public void setHelm(double diameter, String color) { this.helm = helm; }
+    public void setHelm(double diameter, String color) { this.helm =
+            new Helm(diameter,color); }
 
     public Wheel getWheel() { return wheel; }
 
-    public void setWheel(double diameter, String color) { this.wheel = wheel; }
+    public void setWheel(double diameter, String color) { this.wheel =
+            new Wheel(diameter,color); }
 
     public Body getBody() { return body; }
 
-    public void setBody(double numberOfSits, String bodeTypes) { this.body = body; }
+    public void setBody(double numberOfSits, String bodeTypes) { this.body =
+            new Body(numberOfSits, bodeTypes); }
 
     @Override
     public String toString() {
