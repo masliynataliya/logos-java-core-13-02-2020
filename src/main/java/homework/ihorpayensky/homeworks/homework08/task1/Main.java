@@ -1,5 +1,7 @@
 package homework.ihorpayensky.homeworks.homework08.task1;
 
+import homework.denysyerchenko.lesson08.numbers.months.Season;
+
 import java.util.Scanner;
 
 class Main {
@@ -45,14 +47,14 @@ class Main {
                         System.out.println(e);
                 break;
             case 6:
-                for (int i = 0; i < Months.values().length; i++)
-                    if (Months.valueOf(month) == Months.values()[i])
-                        System.out.println(Months.values()[(i+1)%12]);
+                for (int i = 0; i < Seasons.values().length; i++)
+                    if (Seasons.values()[i].equals(Months.valueOf(month).getSeason()))
+                        System.out.println(Seasons.values()[(i+1)%4]);
                 break;
             case 7:
-                for (int i = 0; i < Months.values().length; i++)
-                    if (Months.valueOf(month) == Months.values()[i])
-                        System.out.println(Months.values()[ i == 0 ? Months.values().length-1 : (i-1)%12]);
+                for (int i = 0; i < Seasons.values().length; i++)
+                    if (Seasons.values()[i].equals(Months.valueOf(month).getSeason()))
+                        System.out.println(Seasons.values()[ i == 0 ? Seasons.values().length-1 : (i-1)%4]);
                 break;
             case 8:
                 for (Months e: Months.values())

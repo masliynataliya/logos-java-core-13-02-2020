@@ -4,10 +4,10 @@ import org.w3c.dom.ls.LSOutput;
 
 public class Applicator {
     public static void main(String[] args) {
-        Amphibia amphibia = new Amphibia();
-        System.out.println(amphibia.eats());
-        System.out.println(amphibia.sleep());
-        System.out.println(amphibia.swimming());
-        System.out.println(amphibia.walk());
+        Amphibia frog = new Frog();
+        System.out.println(frog.eats());
+        System.out.println(frog.sleep());
+        System.out.println(frog.swimming());
+        System.out.println(frog.walk());
     }
 }
