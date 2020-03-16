@@ -1,4 +1,4 @@
-package homework.denysyerchenko.lesson08.numbers.months;
+package homework.denysyerchenko.lesson08.months;
 
 import java.util.Scanner;
 
@@ -31,6 +31,7 @@ public class MonthApp {
                         break;
                     }
                 }
+                break;
             case 2:
                 System.out.println("Enter desired month");
                 String desiredMonth2 = monthScanner.nextLine();
@@ -41,6 +42,7 @@ public class MonthApp {
                         System.out.println(months[counter2]);
                     }
                 }
+                break;
             case 3:
                 System.out.println("Enter desired month");
                 String desiredMonth3 = monthScanner.nextLine();
@@ -52,6 +54,7 @@ public class MonthApp {
 
                     }
                 }
+                break;
             case 4:
                 System.out.println("Enter desired month");
                 String desiredMonth4 = monthScanner.nextLine();
