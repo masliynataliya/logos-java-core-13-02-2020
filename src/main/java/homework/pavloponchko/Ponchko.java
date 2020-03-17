@@ -2,6 +2,6 @@ package homework.pavloponchko;
 
 public class Ponchko {
     public static void main(String[] args) {
-        System.out.println("hello oll");
+        System.out.println("Hello old");
     }
 }
