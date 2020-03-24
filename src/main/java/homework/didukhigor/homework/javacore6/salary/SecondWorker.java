@@ -2,13 +2,12 @@ package homework.didukhigor.homework.javacore6.salary;
 
 public class SecondWorker implements Salary {
 
-    private String name = "Doctor";
-    private double salaryForTheMonth = 2237.3445;
-
+    private String name;
+    private double salaryForTheMonth;
 
     public SecondWorker() {
-        this.name = name;
-        this.salaryForTheMonth = salaryForTheMonth;
+        this.name = "Doctor";
+        this.salaryForTheMonth = 2237.3445;
     }
 
     @Override

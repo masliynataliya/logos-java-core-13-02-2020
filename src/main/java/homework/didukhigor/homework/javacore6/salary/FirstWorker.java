@@ -2,14 +2,14 @@ package homework.didukhigor.homework.javacore6.salary;
 
 public class FirstWorker implements Salary {
 
-    private String name = "Santehnic";
-    private double paymentPerHour = 12;
-    private int workingHoursPerMonth = 176;
+    private String name;
+    private double paymentPerHour;
+    private int workingHoursPerMonth;
 
     public FirstWorker() {
-        this.name = name;
-        this.paymentPerHour = paymentPerHour;
-        this.workingHoursPerMonth = workingHoursPerMonth;
+        this.name = "Santehnic ";
+        this.paymentPerHour = 12;
+        this.workingHoursPerMonth = 176;
     }
 
 
