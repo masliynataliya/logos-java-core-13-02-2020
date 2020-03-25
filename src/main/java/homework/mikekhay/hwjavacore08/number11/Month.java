@@ -1,5 +1,5 @@
-package homework.mikekhay.hwjavacore08.number1;
-import static homework.mikekhay.hwjavacore08.number1.Season.*;
+package homework.mikekhay.hwjavacore08.number11;
+import static homework.mikekhay.hwjavacore08.number11.Season.*;
 
 
 public enum Month {

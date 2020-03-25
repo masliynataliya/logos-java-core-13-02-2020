@@ -1,4 +1,4 @@
-package homework.mikekhay.hwjavacore08.number1;
+package homework.mikekhay.hwjavacore08.number11;
 
 
 import java.util.Scanner;
