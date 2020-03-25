@@ -2,25 +2,18 @@ package homework.mikekhay.hmjavacore07.number1;
 
 import java.util.Random;
 
-public class KerAirplane {
+class KerAirplane {
     Random random = new Random();
-
-
-    public int RyxWerx() {
-        int rand = ( random.nextInt(500) );
-        return rand; }
-
-    public int RyxWnuz() {
-         int rand = ( random.nextInt(500));
-         return rand;
+    public void ryxWerx() {
+        System.out.println("Moving up = " + random.nextInt(1000));
     }
-
-    public int RyxWper() {
-        int rand = ( random.nextInt(1000));
-        return rand;
+    public void ryxWnuz() {
+        System.out.println("Moving doun = " + random.nextInt(1000));
     }
-    public  int RyxNaz() {
-        int rand = ( random.nextInt(100));
-        return rand;
+    public void ryxWper() {
+        System.out.println("Moving forward = " + random.nextInt(1000));
+    }
+    public void ryxNaz() {
+        System.out.println("Moving back = " + random.nextInt(1000));
     }
 }

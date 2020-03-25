@@ -2,20 +2,28 @@ package homework.mikekhay.hmjavacore07.number1;
 
 
 class Cy27 extends Aiplenet implements Accessibility {
-
     private double maxkm;
-    private double dow;
-    private double chur;
-    private double mas;
     private String color;
+    private KerAirplane kerAirplane = new KerAirplane();
 
     public Cy27(double dow, double chur, double mas, double maxkm, String color) {
-        this.dow = dow;
-        this.chur = chur;
-        this.mas = mas;
+        super(dow,chur,mas);
         this.maxkm = maxkm;
         this.color = color;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void rryxWerx(){kerAirplane.ryxWerx();}
+    public void rryxWper(){kerAirplane.ryxWper();}
+    public void rryxNaz(){kerAirplane.ryxNaz();}
+    public void rryxWnuz(){kerAirplane.ryxWnuz();}
 
     @Override
     public void boost() {
@@ -30,4 +38,5 @@ class Cy27 extends Aiplenet implements Accessibility {
     public void nuclearstrike() {
         System.out.println("Nuclear strike = " + random.nextInt(10) + " nuclear warheads.");
     }
+
 }

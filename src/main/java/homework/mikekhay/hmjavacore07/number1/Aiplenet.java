@@ -2,22 +2,34 @@ package homework.mikekhay.hmjavacore07.number1;
 
 import java.util.Random;
 
-class Aiplenet {
+public abstract class Aiplenet implements Accessibility{
 
-    static Random random = new Random();
+    private double dow;
+    private double chur;
+    private double mas;
+    public double speed;
 
-    protected static void startmotor() {
-        System.out.println("Starts motors airplenet = " + (20 + random.nextInt(68) + "c"));
+    public Aiplenet(double dow, double chur, double mas) {
+        this.dow = dow;
+        this.chur = chur;
+        this.mas = mas;
     }
 
-    protected static void vzlitlitaka() {
-        System.out.println("Takeoff of the plane. Will be held on the full tank of fuel = " + random.nextInt() + "Km");
+    Random random = new Random();
 
+    public void startmotor() {
+        System.out.println("Starts motors airplenet = " + (20 + random.nextInt(68) + " c"));
     }
 
-    protected static void posadka() {
+    public void vzlitlitaka() {
+        System.out.printf("Takeoff of the plane. Will be held on the full tank of fuel %s km. ",random.nextInt(1000));
+        System.out.println();
+    }
+
+    public void posadka() {
         System.out.println("Airplenet is landing !");
     }
+
 }
 
 
