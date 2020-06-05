@@ -1,25 +1,39 @@
-package homework.ihorpayensky.homeworks.homework08.task1;
+package homework.ihorpayensky.homeworks.homework09.task1;
+
+import homework.romanivanov.javacore.jc08hw.Month;
 
 import java.util.Scanner;
 
 class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongInputConsoleParametersException {
         try {
-            System.out.print("Enter a month: ");
-            String month = new Scanner(System.in).nextLine().toUpperCase();
-
-            System.out.print("Enter a number of task: ");
-            int task = new Scanner(System.in).nextInt();
-
-            System.out.println(" ===");
-            getTask(month, task);
-
-        } catch (Exception e) {
-            System.out.println("Такого місяця не існує");
+            getTask();
+        } catch (WrongInputConsoleParametersException e) {
+            System.out.println(e.getMessage());
         }
+        catch (Exception e) {
+            System.out.println("Привіт, не очікував? а я появився! Подумай чому, добре подумай, а може такого місяця не існує?");
+        }
+
     }
 
-    private static void getTask(String month, int task) {
+    private static void getTask() throws WrongInputConsoleParametersException {
+        System.out.print("Enter a month: ");
+        String month = new Scanner(System.in).nextLine().toUpperCase();
+
+        System.out.print("Enter a number of task: ");
+        Scanner scanner = new Scanner(System.in);
+
+        int task;
+        if (!scanner.hasNextBigInteger()) {
+            throw new WrongInputConsoleParametersException("Таски номеруються тільки цілими числами!");
+        } else {
+            task = scanner.nextInt();
+        }
+
+        System.out.println(" ===");
+
+
         switch (task) {
             case 1:
                 System.out.println(Months.valueOf(month));
@@ -70,8 +84,7 @@ class Main {
                 else System.out.println(Months.valueOf(month) + " має не парну кількість днів!");
                 break;
             default:
-                System.out.println("Такого завдання не має!");
-                break;
+                throw new WrongInputConsoleParametersException("Такого завдання немає!)");
         }
     }
 }
