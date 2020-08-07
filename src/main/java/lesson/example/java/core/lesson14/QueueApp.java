@@ -8,7 +8,7 @@ public class QueueApp {
 
     public static void main(String[] args) {
 
-        PriorityQueue queue = new PriorityQueue();
+        PriorityQueue<Student> queue = new PriorityQueue<>();
         queue.add(new Student(3, "Anna", 23));
         queue.add(new Student(3, "Anna", 88));
         queue.add(new Student(3, "Anna", 88));
