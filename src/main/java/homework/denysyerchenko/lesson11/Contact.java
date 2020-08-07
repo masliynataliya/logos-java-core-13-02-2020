@@ -12,8 +12,17 @@ public class Contact {
         return phoneNumber;
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + contactName +
+                " Number: " + phoneNumber;
+    }
+
     public Contact (String initContactName, String initPhoneNumber) {
         contactName = initContactName;
         phoneNumber = initPhoneNumber;
+
+
+
     }
 }
