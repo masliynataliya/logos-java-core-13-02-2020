@@ -2,7 +2,7 @@ package homework.mikekhay.hwjavacore11.klass;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Persons {
+public class Person {
 
     private String name;
     private String number;
@@ -24,7 +24,7 @@ public class Persons {
         this.number = number;
     }
 
-    public Persons(String name, String number) {
+    public Person(String name, String number) {
         this.name = name;
         this.number = number;
     }

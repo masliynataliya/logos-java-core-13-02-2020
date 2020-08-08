@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Telephone {
     public static void main(String[] args) {
 
-        ArrayList<Persons> list = new ArrayList();
+        ArrayList<Person> list = new ArrayList();
 
         while (true) {
             System.out.println("Виберіть опцію");
@@ -31,15 +31,15 @@ public class Telephone {
                     String name = sc.next();
                     System.out.println("Введіть Номер");
                     String number = sc.next();
-                    Persons persons = new Persons(name,number);
-                    list.add(persons);
+                    Person person = new Person(name,number);
+                    list.add(person);
 
                     break;
                 case "3":
                     System.out.println("Введіть імя по якому видати інформацію.");
                     String delName = sc.next();
                     for (int i =0;i<list.size();i++){
-                        Persons p1 = list.get(i);
+                        Person p1 = list.get(i);
                         if (p1.getName().equals(delName)){
                             list.remove(i);
                         }
@@ -48,10 +48,10 @@ public class Telephone {
                     break;
                 case "4":
                     System.out.println("Введіть номер телефону по якому видалити інформацію.");
-                    String delNamber = sc.next();
+                    String delNumber = sc.next();
                     for (int i = 0;i<list.size();i++){
-                        Persons p1 = list.get(i);
-                        if (p1.getNumber().equals(delNamber)){
+                        Person p1 = list.get(i);
+                        if (p1.getNumber().equals(delNumber)){
                             list.remove(i);
                         }
                     }
