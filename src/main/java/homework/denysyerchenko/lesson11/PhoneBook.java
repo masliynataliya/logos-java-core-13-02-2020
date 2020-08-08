@@ -66,6 +66,7 @@ public class PhoneBook {
                             System.out.println("The phone book application is closed");
                             System.exit(0);
                     }
+                    System.out.println();
                 }
             }
         }
