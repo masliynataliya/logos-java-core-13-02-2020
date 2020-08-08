@@ -1,6 +1,7 @@
 package homework.mikekhay.hwjavacore11.klass;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Telephone {
@@ -38,12 +39,19 @@ public class Telephone {
                 case "3":
                     System.out.println("Введіть імя по якому видати інформацію.");
                     String delName = sc.next();
-                    for (int i =0;i<list.size();i++){
-                        Person p1 = list.get(i);
-                        if (p1.getName().equals(delName)){
-                            list.remove(i);
+                    Iterator<Person> iter = list.iterator();
+                    while (iter.hasNext()){
+                        Person person1 = iter.next();
+                        if (person1.getName().equals(delName)){
+                            iter.remove();
                         }
                     }
+//                    for (int i =0;i<list.size();i++){
+//                        Person p1 = list.get(i);
+//                        if (p1.getName().equals(delName)){
+//                            list.remove(i);
+//                        }
+//                    }
 
                     break;
                 case "4":
