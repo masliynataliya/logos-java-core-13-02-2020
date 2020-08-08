@@ -43,7 +43,7 @@ public class PhoneBook {
                         }
                         break;
                     case 4:
-                        System.out.println("enter phone number wich you want delete ");
+                        System.out.println("enter phone number which you want delete ");
                         int numberToDelete = scan.nextInt();
                         Iterator<Person> iteratorNumberDelete = phoneBook.iterator();
                         while (iteratorNumberDelete.hasNext()){
@@ -56,7 +56,6 @@ public class PhoneBook {
                     case 5:
                         System.out.println("Bye!");
                         System.exit(0);
-                        break;
                     default:
                         System.out.println("Ooooops....something went wrong");
                 }
