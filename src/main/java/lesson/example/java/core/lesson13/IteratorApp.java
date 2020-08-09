@@ -20,6 +20,7 @@ public class IteratorApp {
         stringArrayList.add("Saturday");
         stringArrayList.add("Sunday");
 
+
         // не надійний варіант видалення
 //        for (int i = 0; i < stringArrayList.size(); i++) {
 //            if (stringArrayList.get(i).equalsIgnoreCase("monday")) {
