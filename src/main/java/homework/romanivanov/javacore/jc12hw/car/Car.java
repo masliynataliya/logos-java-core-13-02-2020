@@ -2,7 +2,7 @@ package homework.romanivanov.javacore.jc12hw.car;
 
 public class Car {
 
-    private final int releaseDate;
+    private  int releaseDate;
     private final int power;
     private final Engine engine;
     private final SteeringWheel steeringWheel;

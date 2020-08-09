@@ -18,8 +18,7 @@ public class App {
             info();
             System.out.println("Choose option");
             int choose = sc.nextInt();
-            if (choose > 1 & choose < 5) {
-                switch (choose) {
+                switch  (choose) {
                     case 1:
 
                         System.out.println(Arrays.deepToString(randomCars));
@@ -35,20 +34,18 @@ public class App {
                         break;
 
                     case 4:
-                        go = false;
+                       System.exit(0);
                         break;
+                    default:
+                        System.out.println("Введіть правильний номер операції");
                 }
 
 
             }
-            else {
-                System.out.println("Choose correct answer");
-                go = false;
-            }
+
         }
 
 
-    }
 
     private static void randomCarArrayToOneCarTypeArray(Car car, Car[][] randomCars) {
         for (int i = 0; i < randomCars.length; i++) {

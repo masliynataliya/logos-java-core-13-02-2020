@@ -53,15 +53,15 @@ public class PhoneBook {
         System.out.println("Type name of contact");
         String name = sc.nextLine();
         for (int i = 0; i < person.size(); i++) {
-            if (person.get(i).getName().equalsIgnoreCase(name)) ;
-            person.remove(i);
-            System.out.println("Contact(c) deleted");
-            yes = true;
+            if (person.get(i).getName().equalsIgnoreCase(name)) {
+                person.remove(i);
+                System.out.println("Contact(c) deleted");
+                yes = true;
+            }
         }
         if (!yes) {
             System.out.println("Contact(s) by this name not found");
         }
-
     }
     public void info(){
         System.out.println("type 1 to add contact");
@@ -73,3 +73,4 @@ public class PhoneBook {
     }
 
 }
+
