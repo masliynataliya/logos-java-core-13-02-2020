@@ -18,7 +18,7 @@ public class CountText {
                 if (word.equalsIgnoreCase(word1)) {
                     i += 1;
                 } else {
-//                    System.out.println(word + " " + word1); перевірка слів
+//                    System.out.println(word + " " + word1);
                 }
             }
             if (valueOfWords < i) {
