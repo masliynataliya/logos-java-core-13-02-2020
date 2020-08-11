@@ -1,4 +1,4 @@
-package homework.romanivanov.javacore.jc14hw;
+package homework.romanivanov.javacore.jc14hw.Commodity;
 
 public class Commodity {
     private String name;

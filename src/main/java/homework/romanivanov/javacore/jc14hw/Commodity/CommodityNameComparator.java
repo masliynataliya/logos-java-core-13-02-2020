@@ -1,6 +1,4 @@
-package homework.romanivanov.javacore.jc14hw;
-
-import homework.romanivanov.javacore.jc14hw.Commodity;
+package homework.romanivanov.javacore.jc14hw.Commodity;
 
 import java.util.Comparator;
 

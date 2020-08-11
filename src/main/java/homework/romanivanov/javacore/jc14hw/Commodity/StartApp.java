@@ -1,4 +1,4 @@
-package homework.romanivanov.javacore.jc14hw;
+package homework.romanivanov.javacore.jc14hw.Commodity;
 
 import java.util.ArrayList;
 import java.util.Scanner;
