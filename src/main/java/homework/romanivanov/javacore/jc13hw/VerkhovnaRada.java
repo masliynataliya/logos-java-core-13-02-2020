@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class VerkhovnaRada implements Comparator<ArrayList<Deputy>> {
-    private static VerkhovnaRada instance;
+    private static volatile VerkhovnaRada instance;
     Scanner sc = new Scanner(System.in);
     Faction faction = new Faction();
 
