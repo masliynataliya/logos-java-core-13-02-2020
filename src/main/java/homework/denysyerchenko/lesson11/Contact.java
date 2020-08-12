@@ -1,8 +1,8 @@
 package homework.denysyerchenko.lesson11;
 
 public class Contact {
-    public String contactName;
-    public String phoneNumber;
+    private String contactName;
+    private String phoneNumber;
 
     public String getContactName() {
         return contactName;

@@ -37,8 +37,8 @@ public class PhoneBook {
                             System.out.println("The new contact added successfully");
                             break;
                         case 3:
-                            System.out.println("Enter the name" + optionScanner.nextLine());
-                            String contactNameToDelete = optionScanner.nextLine();
+                            System.out.println("Enter the name: ");
+                            String contactNameToDelete = optionScanner.next();
                             for (int i = 0; i < contacts.size(); i++) {
                                 if (contacts.get(i).getContactName().equalsIgnoreCase(contactNameToDelete)) {
                                     contacts.remove(i);
@@ -50,8 +50,8 @@ public class PhoneBook {
                                 }
                             }
                         case 4:
-                            System.out.println("Enter the number" + optionScanner.nextLine());
-                            String contactNumberToDelete = optionScanner.nextLine();
+                            System.out.println("Enter the number: ");
+                            String contactNumberToDelete = optionScanner.next();
                             for (int j = 0; j < contacts.size(); j++) {
                                 if (contacts.get(j).getPhoneNumber().equalsIgnoreCase(contactNumberToDelete)) {
                                     contacts.remove(j);
