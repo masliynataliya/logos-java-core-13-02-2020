@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CountText {
     public static void countText() {
-        System.out.println("Введіть речення");
+        System.out.println("Type text");
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
         text = text.replaceAll("[,.!:;?]", "");
