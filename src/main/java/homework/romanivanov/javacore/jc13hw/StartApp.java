@@ -6,9 +6,7 @@ import java.util.Scanner;
 public class StartApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Faction faction = new Faction();
         VerkhovnaRada verkhovnaRada = new VerkhovnaRada();
-        ArrayList<ArrayList<Deputy>> factions = new ArrayList<>();
         boolean go = true;
         info();
         while (go) {
@@ -17,46 +15,44 @@ public class StartApp {
             switch (choose) {
 
                 case 1:
-                    verkhovnaRada.addFaction(factions);
-//                    System.out.println(factions.toString());
+                    verkhovnaRada.addFaction();
+
                     break;
                 case 2:
-                    verkhovnaRada.deleteFaction(factions);
+
+                    verkhovnaRada.deleteFaction();
                     break;
 
                 case 3:
-                    verkhovnaRada.allFactions(factions);
+                    verkhovnaRada.allFactions();
                     break;
                 case 4:
-                    faction.removeAllDeputies(factions);
+                    verkhovnaRada.removeAllDeputiesFromFaction();
                     break;
                 case 5:
-                    faction.showFaction(factions);
+                    verkhovnaRada.showFaction();
 
                     break;
                 case 6:
-                    verkhovnaRada.addDeputyToFaction(factions);
-                    System.out.println(factions.toString());
+                    verkhovnaRada.addDeputyToFaction();
+
                     break;
                 case 7:
-                    verkhovnaRada.removeDeputyByIndex(factions);
+                    verkhovnaRada.removeDeputyByName();
                     break;
                 case 8:
-                    verkhovnaRada.showGrafters(factions);
+                    verkhovnaRada.showGrafters();
                     break;
                 case 9:
-                    verkhovnaRada.giveBribeToAll(factions);
+                    verkhovnaRada.giveBribeToAll();
                     break;
                 case 10:
-                    faction.compareDeputy(factions);
+                    verkhovnaRada.deputyWithMostBribeFactions();
                     break;
                 case 11:
-                    verkhovnaRada.compareDeputy(factions);
-                    break;
-                case 12:
                     info();
                     break;
-                case 13:
+                case 12:
                     System.exit(0);
 
             }

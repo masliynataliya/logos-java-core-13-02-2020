@@ -1,8 +1,9 @@
 package homework.romanivanov.javacore.jc13hw;
 
+import java.util.Comparator;
 import java.util.Scanner;
 
-public class Deputy extends Person {
+public class Deputy extends Person implements Comparable<Deputy> {
     private int age;
     private String name;
     private String surname;
@@ -92,5 +93,12 @@ public class Deputy extends Person {
     public Deputy setGrafter(boolean grafter) {
         this.grafter = grafter;
         return this;
+    }
+
+
+
+    @Override
+    public int compareTo(Deputy deputy) {
+        return getName().compareTo(deputy.getName());
     }
 }

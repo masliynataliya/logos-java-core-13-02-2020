@@ -1,13 +1,11 @@
 package homework.romanivanov.javacore.jc13hw;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
-public class VerkhovnaRada implements Comparator<ArrayList<Deputy>> {
+public class VerkhovnaRada {
     private static volatile VerkhovnaRada instance;
+    private ArrayList<Faction> factions = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
-    Faction faction = new Faction();
 
     public static synchronized VerkhovnaRada getInstance() {
         if (instance == null) {
@@ -16,74 +14,121 @@ public class VerkhovnaRada implements Comparator<ArrayList<Deputy>> {
         return instance;
     }
 
-    public void addFaction(ArrayList<ArrayList<Deputy>> factions) {
-        factions.add(new ArrayList<Deputy>());
-
+    public void addFaction() {
+        System.out.println("Дайте назву фракції");
+        String name = sc.next();
+        boolean b = true;
+        for (Faction f : factions) {
+            if (f.getName().equalsIgnoreCase(name)) {
+                System.out.println("Така назва фракції вже існує");
+                b = false;
+            }
+        }
+        if (b){
+            factions.add(new Faction(name));
+            System.out.println(factions);
+        }
     }
 
-    public void deleteFaction(ArrayList<ArrayList<Deputy>> factions) {
-        System.out.println("Виберіть індекс фракції яку хочете видалити");
-        factions.remove(sc.nextInt());
+    public void deleteFaction() {
+        System.out.println("Напишіть назву фракції яку хоччете видалити");
+        String name = sc.next();
+        Iterator<Faction> fractionIterator = factions.iterator();
+        while(fractionIterator.hasNext()) {
+            Faction f = fractionIterator.next();
+            if(f.getName().equalsIgnoreCase(name)){
+                fractionIterator.remove();
+                factions.remove(f);
+            }
+        }
     }
 
-    public void allFactions(ArrayList<ArrayList<Deputy>> factions) {
+    public void allFactions() {
         System.out.println(factions.toString());
     }
 
-
-    public void addDeputyToFaction(ArrayList<ArrayList<Deputy>> factions) {
-        System.out.println("Виберіть індекс фракції в яку хочете добавити депутата");
-        int number = sc.nextInt();
-        for (int i = 0; i < factions.size(); i++) {
-            if (factions.get(number) == factions.get(i)) {
-                factions.get(i).add(faction.addDeputy());
+    public void removeAllDeputiesFromFaction(){
+        System.out.println("Введіть ім'я фракції в якій  хочете видалити");
+        String number = sc.next();
+        for (Faction f: factions){
+            if(f.getName().equalsIgnoreCase(number)){
+                f.removeAllDeputies();
             }
         }
 
     }
 
-    public void removeDeputyByIndex(ArrayList<ArrayList<Deputy>> factions) {
-        System.out.println("Виберіть індекс фракції в якій хочете видалити депутата");
-        int number = sc.nextInt();
-        for (int i = 0; i < factions.size(); i++) {
-            if (factions.get(number) == factions.get(i)) {
-                System.out.println(factions.get(i));
-                faction.removeDeputy(factions.get(i));
+
+    public void addDeputyToFaction() {
+        System.out.println("Введіть ім'я фракції в яку хочете добавити депутата");
+        String name = sc.next();
+        for (Faction f: factions){
+            if(f.getName().equalsIgnoreCase(name)){
+                f.addDeputy();
+            }
+        }
+
+    }
+
+
+    public void removeDeputyByName() {
+        System.out.println("Виберіть ім'я фракції ї в якій хочете видалити депутата");
+        String name = sc.next();
+        for (Faction f: factions){
+            if(f.getName().equalsIgnoreCase(name)){
+                System.out.println("Введіть ім'я депутата якого б хотіли видалити");
+                String name1 = sc.next();
+                for (Deputy d : f.getDeputies()){
+                    if(d.getName().equalsIgnoreCase(name1)){
+                        f.removeDeputy(name1);
+                        break;
+
+                    }
+                }
             }
         }
     }
 
-    public void showGrafters(ArrayList<ArrayList<Deputy>> factions) {
-        for (int i = 0; i < factions.size(); i++) {
-            faction.showGrafters(factions.get(i));
+    public void showGrafters() {
+       for (Faction f: factions){
+           f.showGrafters();
+       }
+
+    }
+
+    public void giveBribeToAll() {
+        for(Faction f: factions){
+            f.giveBribeToAll();
+        }
+    }
+
+
+
+
+
+    public void showFaction() {
+        System.out.println("виберіть ім'я фракції яку хочете подивитись");
+        String name = sc.next();
+        for (Faction f: factions){
+            if (f.getName().equalsIgnoreCase(name)){
+                f.infoFaction();
+            }
+        }
+
+        }
+        public void deputyWithMostBribeFactions(){
+        Deputy biggestBriber = new Deputy(0,0);
+        for (Faction f: factions){
+            for (Deputy d : f.deputies){
+                if (f.deputyWithMostBribe().getBribe() < d.getBribe()){
+                    biggestBriber = d;
+                }
+            }
+            }
+            System.out.println(biggestBriber.toString() + " Найбільший хабарник");
         }
 
     }
 
-    public void giveBribeToAll(ArrayList<ArrayList<Deputy>> factions) {
-        for (int i = 0; i < factions.size(); i++) {
-            faction.giveBribeToAll(factions.get(i));
-        }
-    }
 
-
-    public void compareDeputy(ArrayList<ArrayList<Deputy>> factions) {
-        for (int i = 0; i < factions.size(); i++) {
-//            faction.deputyWithMostBribe(factions.get(i));
-            System.out.println(faction.deputyWithMostBribe(factions.get(i)).toString());
-        }
-    }
-
-    @Override
-    public int compare(ArrayList<Deputy> deputies, ArrayList<Deputy> deputyArrayList) {
-        int bribe1 = faction.deputyWithMostBribe(deputies).getBribe();
-        int bribe2 = faction.deputyWithMostBribe(deputyArrayList).getBribe();
-        if (bribe1 > bribe2) {
-            return 1;
-        }
-        if (bribe1 < bribe2) {
-            return -1;
-        } else return 0;
-    }
-}
 
