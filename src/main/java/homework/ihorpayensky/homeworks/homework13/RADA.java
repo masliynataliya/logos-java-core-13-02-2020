@@ -151,8 +151,6 @@ class RADA {
         }
     }
 
-    // ---------------------------------------
-
     public void findBestBriber() {
         Deputy bestBriber = null;
         for (Fraction f: fractions) {

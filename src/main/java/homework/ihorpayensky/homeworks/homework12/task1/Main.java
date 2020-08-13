@@ -1,7 +1,5 @@
 package homework.ihorpayensky.homeworks.homework12.task1;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.*;
 
 class Main {
