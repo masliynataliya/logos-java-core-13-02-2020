@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class StartApp {
     public static void main(String[] args) {
-        CommodityFunction commodity = new CommodityFunction();
+        Commodity commodity = new Commodity();
         ArrayList<Commodity> commodities = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         boolean b = true;
@@ -15,33 +15,30 @@ public class StartApp {
             int choose = sc.nextInt();
             switch (choose) {
                 case 1:
-                    commodity.addCommodity(commodities);
-                    System.out.println(commodities);
+                    commodity.addCommodity();
+
                     break;
                 case 2:
-                    commodity.removeByName(commodities);
-                    System.out.println(commodities);
+                    commodity.removeByName();
+
                     break;
                 case 3:
-                    commodity.changeCommodity(commodities);
-                    System.out.println(commodities);
+                    commodity.changeCommodity();
                     break;
                 case 4:
-                    commodity.sortByName(commodities);
+                    commodity.sortByName();
                     break;
                 case 5:
-                    commodity.sortByLength(commodities);
+                    commodity.sortByLength();
                     break;
                 case 6:
-                    commodity.sortByLWeight(commodities);
+                    commodity.sortByLWeight();
                     break;
                 case 7:
-                    commodity.sortByWidth(commodities);
+                    commodity.sortByWidth();
                     break;
                 case 8:
-                    System.out.println(commodities);
-                    commodity.deleteByIndex(commodities);
-                    System.out.println(commodities);
+                    commodity.findByIndex();
                     break;
                 case 9:
                     info();
@@ -53,6 +50,7 @@ public class StartApp {
         }
 
     }
+
     public static void info() {
         System.out.println("Введіть 1 для того щоб додати товар ");
         System.out.println("Введіть 2 для того щоб видалити товар");
