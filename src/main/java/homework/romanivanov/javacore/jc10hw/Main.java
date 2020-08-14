@@ -13,7 +13,7 @@ public class Main {
 //        replace();//2 завдання
 //        count();// 3 3авдання
 //        countWordsSentences(); // 4 завдання
-//        countSentences();//5 завдання
+        countSentences();//5 завдання
 //        countText();// 6 завдання
 
 

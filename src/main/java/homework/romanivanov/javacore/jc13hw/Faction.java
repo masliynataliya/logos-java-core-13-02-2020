@@ -5,14 +5,10 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class Faction implements Comparator<Faction> {
+public class Faction implements Comparable<Faction> {
     Scanner sc = new Scanner(System.in);
     ArrayList<Deputy> deputies;
     String name;
-
-    public Faction() {
-        deputies = new ArrayList<>();
-    }
 
     public Faction(String name) {
         deputies = new ArrayList<>();
@@ -69,7 +65,6 @@ public class Faction implements Comparator<Faction> {
         while (deputyIterator.hasNext()) {
             Deputy d = deputyIterator.next();
             if (d.getName().equalsIgnoreCase(name)) {
-                deputyIterator.remove();
                 deputies.remove(d);
             }else {
                 System.out.println("Такого депутата не існує");
@@ -110,12 +105,10 @@ public class Faction implements Comparator<Faction> {
     }
 
 
-
-
     @Override
-    public int compare(Faction faction, Faction faction1) {
-        String name = faction.getName();
-        String name2 = faction1.getName();
+    public int compareTo(Faction faction) {
+        String name = getName();
+        String name2 = faction.getName();
         return name.compareTo(name2);
     }
 }
