@@ -1,31 +1,80 @@
 package homework.romanivanov.javacore.jc12hw.ArrayExample;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
-public class ArrayListExample {
+public class ArrayListExample<E> implements ListExample<E> {
+    private static final int DEFAULT_CAPACITY = 10;
+    private static final Object[] DEFAULT_ELEMENT = new Object[0];
+    private Object[] elements;
+    private int arrayElements;
 
-    ArrayList arrayList = new ArrayList();
+    public ArrayListExample() {
+        this.elements = new Object[DEFAULT_CAPACITY];
+    }
+
+    ArrayListExample(int capacity) {
+        if (capacity > 0) {
+            this.elements = new Object[capacity];
+        } else if (capacity == 0) {
+            this.elements = DEFAULT_ELEMENT;
+        } else throw new IllegalArgumentException("capacity can`t be less then 0");
+
+    }
 
     @Override
     public String toString() {
-        return "ArrayListExample{" +
-                "arrayList=" + arrayList +
-                '}';
+        return "ArrayListExample: " +  Arrays.toString(elements);
     }
 
-    public void addI(int number) {
-        arrayList.add(number);
+    private int newCapacity() {
+        return elements.length * 2;
     }
 
-    public void addS(String stringExample) {
-        arrayList.add(stringExample);
+    private void loadFactor() {
+        for (Object element : elements) {
+            if (element != null) {
+                arrayElements++;
+            }
+        }
+        if (isArrayFull()) {
+            this.elements = Arrays.copyOf(elements, newCapacity());
+        }
+        arrayElements = 0;
     }
 
-    public void addB(Boolean booleanExample) {
-        arrayList.add(booleanExample);
+    private boolean isArrayFull() {
+        return elements.length == arrayElements;
     }
 
-    public void remove(int index) {
-        arrayList.remove(index);
+    public int size() {
+        return elements.length;
+    }
+
+
+    @Override
+    public void add(E type) {
+        loadFactor();
+        for (int i = 0; i < elements.length; i++) {
+            if (elements[i] == null) {
+                elements[i] = type;
+                return;
+            }
+        }
+    }
+
+    @Override
+    public void remove(Object obj) {
+        replace(obj, null);
+    }
+
+    @Override
+    public void replace(Object obj, E newValue) {
+        for (int i = 0; i < elements.length; i++) {
+            if (obj.equals(elements[i])) {
+                elements[i] = newValue;
+                return;
+            }
+        }
+
     }
 }
