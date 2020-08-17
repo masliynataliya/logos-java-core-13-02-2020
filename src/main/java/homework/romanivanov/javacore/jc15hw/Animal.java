@@ -1,12 +1,11 @@
 package homework.romanivanov.javacore.jc15hw;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Animal {
+    Scanner sc = new Scanner(System.in);
     private String typeOfAnimal;
     private String name;
-Scanner sc = new Scanner(System.in);
 
     public Animal(String typeOfAnimal, String name) {
         this.typeOfAnimal = typeOfAnimal;
@@ -14,7 +13,12 @@ Scanner sc = new Scanner(System.in);
     }
 
     public Animal() {
-
+        System.out.println("Введіть ім'я тваринки");
+        String name = sc.next();
+        System.out.println("Введіть тип тваринки");
+        String type = sc.next();
+        this.name = name;
+        this.typeOfAnimal = type;
     }
 
     public String getTypeOfAnimal() {
@@ -42,15 +46,6 @@ Scanner sc = new Scanner(System.in);
                 ", name='" + name + '\'' +
                 '}';
     }
-    public Animal createAnimal() {
-        Animal animal = new Animal();
-        System.out.println("Введіть ім'я тваринки");
-        String name = sc.next();
-        System.out.println("Введіть тип тваринки");
-        String type = sc.next();
-        animal.setName(name);
-        animal.setTypeOfAnimal(type);
-        return animal;
-    }
+
 
 }

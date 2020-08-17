@@ -6,14 +6,6 @@ public class ZooClub {
     Scanner sc = new Scanner(System.in);
     Map<Person, List<Animal>> map = new HashMap<>();
 
-    public ZooClub() {
-        this.animals = new ArrayList<>();
-    }
-
-    ArrayList<Animal> animals;
-
-
-
 
     public Person createPerson() {
         Person person = new Person();
@@ -28,20 +20,11 @@ public class ZooClub {
 
 
     public void addPerson() {
-        map.put(createPerson(),new ZooClub().animals);
+        map.put(createPerson(), new ArrayList<>());
         System.out.println(map);
 
 
     }
-    public List<Animal> addAnimalToList(Animal animal) {
-        Animal animal1 = new Animal();
-        animal1 = animal.createAnimal();
-        animals.add(animal1);
-
-        return animals;
-    }
-
-
 
 
     public void removeSpecificAnimalFromAll() {
@@ -102,7 +85,7 @@ public class ZooClub {
 
             }
         }
-        if (yes){
+        if (yes) {
             System.out.println("Людини з таким іменем не існує");
         }
     }
@@ -111,7 +94,7 @@ public class ZooClub {
     public void showZooClub() {
         int i = 0;
         for (Person p : map.keySet()) {
-                i = i + map.get(p).size();
+            i = i + map.get(p).size();
         }
         System.out.println("Кількість учасників: " + map.keySet().size());
         System.out.println("Кількість тваринок: " + i);
@@ -124,22 +107,15 @@ public class ZooClub {
         System.out.println("Введіть ім'я людини");
         boolean y = false;
         String name = sc.next();
-        Animal animal = new Animal();
         for (Person p : map.keySet()) {
             if (p.getName().equalsIgnoreCase(name)) {
-                if (map.get(p) == null){
-                    map.put(p, addAnimalToList(animal));
-                    y = true;
-
-                } else {
-                    map.get(p).add(animal.createAnimal());
-                    y = true;
-                }
+                map.get(p).add(new Animal());
+                y = true;
                 System.out.println(map);
             }
 
         }
-        if (!y){
+        if (!y) {
             System.out.println("Людини з таким іменем не знайдено");
         }
     }
