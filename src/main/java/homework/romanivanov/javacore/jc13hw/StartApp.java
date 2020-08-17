@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class StartApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        VerkhovnaRada verkhovnaRada = new VerkhovnaRada();
-        boolean go = true;
-        info();
-        while (go) {
+        VerkhovnaRada verkhovnaRada = VerkhovnaRada.getInstance();
+        while (true) {
+            info();
             System.out.println("Choose option");
             int choose = sc.nextInt();
             switch (choose) {

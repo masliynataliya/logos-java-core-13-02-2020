@@ -6,6 +6,14 @@ public class ZooClub {
     Scanner sc = new Scanner(System.in);
     Map<Person, List<Animal>> map = new HashMap<>();
 
+    public ZooClub() {
+        this.animals = new ArrayList<>();
+    }
+
+    ArrayList<Animal> animals;
+
+
+
 
     public Person createPerson() {
         Person person = new Person();
@@ -20,19 +28,21 @@ public class ZooClub {
 
 
     public void addPerson() {
-        Animal animal = new Animal();
-        map.put(createPerson(),animal.animals);
+        map.put(createPerson(),new ZooClub().animals);
         System.out.println(map);
 
 
     }
+    public List<Animal> addAnimalToList(Animal animal) {
+        Animal animal1 = new Animal();
+        animal1 = animal.createAnimal();
+        animals.add(animal1);
+
+        return animals;
+    }
 
 
-//    public List<Animal> addAnimalToList() {
-//        Animal animal = new Animal();
-//        animal.createAnimal();
-//
-//    }
+
 
     public void removeSpecificAnimalFromAll() {
         System.out.println("Введіть тип тваринки який хочете видалити");
@@ -80,14 +90,20 @@ public class ZooClub {
 
     public void removePerson() {
         System.out.println("Введіть ім'я участника клубу якого ви хочете видалити");
+        boolean yes = true;
         String name = sc.next();
         Iterator<Person> personIterator = map.keySet().iterator();
         while (personIterator.hasNext()) {
             Person p = personIterator.next();
             if (p.getName().equalsIgnoreCase(name)) {
                 personIterator.remove();
+                yes = false;
                 break;
-            } else System.out.println("Людини з таким іменом не існує");
+
+            }
+        }
+        if (yes){
+            System.out.println("Людини з таким іменем не існує");
         }
     }
 
@@ -95,15 +111,10 @@ public class ZooClub {
     public void showZooClub() {
         int i = 0;
         for (Person p : map.keySet()) {
-            if (map.get(p) == null){
-//                System.out.println(map.keySet().toString());
-
-            }else {
                 i = i + map.get(p).size();
-            }
         }
         System.out.println("Кількість учасників: " + map.keySet().size());
-        System.out.println(i + " Кількість тваринок");
+        System.out.println("Кількість тваринок: " + i);
         System.out.println(map.entrySet());
 
     }
@@ -117,7 +128,7 @@ public class ZooClub {
         for (Person p : map.keySet()) {
             if (p.getName().equalsIgnoreCase(name)) {
                 if (map.get(p) == null){
-                    map.put(p, animal.addAnimalToList(animal));
+                    map.put(p, addAnimalToList(animal));
                     y = true;
 
                 } else {

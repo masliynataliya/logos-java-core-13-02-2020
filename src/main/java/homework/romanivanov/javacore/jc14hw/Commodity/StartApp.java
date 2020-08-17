@@ -8,9 +8,8 @@ public class StartApp {
         Commodity commodity = new Commodity();
         ArrayList<Commodity> commodities = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        boolean b = true;
         info();
-        while (b) {
+        while (true) {
             System.out.println("Виберіть опцію");
             int choose = sc.nextInt();
             switch (choose) {

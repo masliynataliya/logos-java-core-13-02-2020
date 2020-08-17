@@ -16,13 +16,7 @@ public class Commodity {
         commodities = new ArrayList<>();
     }
 
-    public Commodity(String name, int length, int width, int weight) {
-        this.name = name;
-        this.length = length;
-        this.width = width;
-        this.weight = weight;
-        commodities = new ArrayList<>();
-    }
+
 
     @Override
     public String toString() {

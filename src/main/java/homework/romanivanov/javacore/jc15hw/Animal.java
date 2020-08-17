@@ -1,24 +1,20 @@
 package homework.romanivanov.javacore.jc15hw;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Animal {
     private String typeOfAnimal;
     private String name;
-ArrayList<Animal> animals;
 Scanner sc = new Scanner(System.in);
 
     public Animal(String typeOfAnimal, String name) {
-animals = new ArrayList<>();
         this.typeOfAnimal = typeOfAnimal;
         this.name = name;
     }
 
     public Animal() {
 
-animals = new ArrayList<>();
     }
 
     public String getTypeOfAnimal() {
@@ -54,13 +50,7 @@ animals = new ArrayList<>();
         String type = sc.next();
         animal.setName(name);
         animal.setTypeOfAnimal(type);
-//        animals.add(animal);
-        return animal; //зроби щоб анімал сетався в певний ліст, а не вертав ліст
+        return animal;
     }
-    public List<Animal> addAnimalToList(Animal animal) {
-        animal = createAnimal();
-        animals.add(animal);
 
-        return animals;
-    }
 }

@@ -7,7 +7,7 @@ public class CountSentences {
         Scanner sc = new Scanner(System.in);
         System.out.println("Type sentence");
         String text = sc.nextLine();
-        text = text.replaceAll("[,.!:;?]", "");
+        text = text.replaceAll("[,.!:;?]", " ");
         String[] words = text.split("\\s");
         int maxWords = 0;
         String word = null;

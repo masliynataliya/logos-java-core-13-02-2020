@@ -20,7 +20,7 @@ public class Deputy extends Person implements Comparable<Deputy> {
         this.name = name;
         this.surname = surname;
         this.grafter = grafter;
-        int bribe = getBribe();
+        int bribe = 0;
     }
 
     public void bribeDeputy() {
@@ -28,7 +28,6 @@ public class Deputy extends Person implements Comparable<Deputy> {
         System.out.println("Введіть суму хабаря для: " + getName()+ " " + getSurname());
         int amount = sc.nextInt();
         if (grafter) {
-            setBribe(amount);
             if (amount >= 5000) {
                 System.out.println("Міліція увязнить депутата цього депутата" + getName()+ " " + getSurname());
             } else {

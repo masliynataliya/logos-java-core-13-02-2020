@@ -4,6 +4,10 @@ import java.util.*;
 
 public class VerkhovnaRada {
     private static volatile VerkhovnaRada instance;
+
+    private VerkhovnaRada() {
+    }
+
     private ArrayList<Faction> factions = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -38,7 +42,6 @@ public class VerkhovnaRada {
             Faction f = fractionIterator.next();
             if(f.getName().equalsIgnoreCase(name)){
                 fractionIterator.remove();
-                factions.remove(f);
             }
         }
     }

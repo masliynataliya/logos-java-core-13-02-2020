@@ -6,10 +6,7 @@ public class ZooClubApp {
     public static void main(String[] args) {
         ZooClub zooClub = new ZooClub();
         Scanner sc = new Scanner(System.in);
-//        Map<Person, List<Animal>> map = new HashMap<>();
-//        map.put(new Person(), new ArrayList<Animal>());
-        boolean go = true;
-        while (go) {
+        while (true) {
             System.out.println("Виберіть опцію");
             int choose = sc.nextInt();
             switch (choose) {
@@ -32,14 +29,29 @@ public class ZooClubApp {
                     zooClub.showZooClub();
                     break;
                 case 7:
-
+                    info();
                     break;
                 case 8:
                     System.exit(0);
 
             }
         }
+
+
+
     }
+    public static void info() {
+        System.out.println("Натисніть 1 щоб добавити людину");
+        System.out.println("Натисніть 2 щоб добавити тваринку до учасника");
+        System.out.println("Натисніть 3 щоб видалити тваринку за іменем");
+        System.out.println("Натисніть 4 щоб видалити учасника зооклубу");
+        System.out.println("Натисніть 5 щоб видалити певний тип тваринок");
+        System.out.println("Натисніть 6 щоб подивитись повний список зооклубу");
+        System.out.println("Натисніть 7 щоб переглянути опції");
+        System.out.println("Натисніть 8 завершити роботу");
 
 }
+
+}
+
 

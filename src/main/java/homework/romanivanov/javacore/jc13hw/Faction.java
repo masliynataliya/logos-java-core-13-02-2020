@@ -61,14 +61,17 @@ public class Faction implements Comparable<Faction> {
     }
 
     public void removeDeputy(String name) {
+        boolean yes = true;
         Iterator<Deputy> deputyIterator = deputies.iterator();
         while (deputyIterator.hasNext()) {
             Deputy d = deputyIterator.next();
             if (d.getName().equalsIgnoreCase(name)) {
                 deputies.remove(d);
-            }else {
-                System.out.println("Такого депутата не існує");
+                yes = false;
             }
+        }
+        if (yes){
+            System.out.println("Такого депутата не існує");
         }
 
     }
