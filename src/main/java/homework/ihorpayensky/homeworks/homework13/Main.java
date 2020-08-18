@@ -20,7 +20,9 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        RADA rada = new RADA();
+        RADA rada = RADA.getRada();
+        Scanner scanner = new Scanner(System.in);
+
         while(true) {
             System.out.println("\nВас вітає верховна рада");
             System.out.println("Введіть ... щоб отримати: ");
@@ -36,13 +38,13 @@ class Main {
             System.out.println("0 - Депутат");
             System.out.println();
             System.out.print(" >> ");
-            String mainScaner = new Scanner(System.in).nextLine();
+            String mainScanner = scanner.nextLine();
 
-            switch (mainScaner) {
+            switch (mainScanner) {
                 case "1":
                     System.out.println("Додати нову фракцію");
                     System.out.print("Введіть назву фракції >> ");
-                    String newFractionName = new Scanner(System.in).nextLine().toUpperCase();
+                    String newFractionName = scanner.nextLine().toUpperCase();
                     if (newFractionName.length() < 4)
                         System.out.println("Не допустимий розмір імені для фракіції \n(мінімум 4 сисмволи)");
                     else
@@ -51,7 +53,7 @@ class Main {
                 case "2":
                     System.out.println("Видалити конкретну фракцію");
                     System.out.print("Введіть назву фракції >> ");
-                    String fractionName2 = new Scanner(System.in).nextLine();
+                    String fractionName2 = scanner.nextLine();
                     rada.removeFraction(fractionName2);
                     break;
                 case "3":
@@ -61,25 +63,25 @@ class Main {
                 case "4":
                     System.out.println("Очистити фракцію");
                     System.out.print("Введіть назву фракції >> ");
-                    String fractionName4 = new Scanner(System.in).nextLine();
+                    String fractionName4 = scanner.nextLine();
                     rada.clearFraction(fractionName4);
                     break;
                 case "5":
                     System.out.println("Вивести дані про конкретну фракцію");
                     System.out.print("Введіть назву фракції >> ");
-                    String fractionName5 = new Scanner(System.in).nextLine();
+                    String fractionName5 = scanner.nextLine();
                     rada.getFractionInfo(fractionName5);
                     break;
                 case "6":
                     System.out.println("Додати депутата до фракції");
                     System.out.print("Введіть назву фракції >> ");
-                    String fractionName6 = new Scanner(System.in).nextLine();
+                    String fractionName6 = scanner.nextLine();
                     if (rada.checkFraction(fractionName6)) {
                         System.out.println("Введіть дані депутата");
                         System.out.println("(Ім'я та прізвище повинно містити не менше 4 символа)");
 
                         System.out.print("І'мя >> ");
-                        String name = new Scanner(System.in).nextLine();
+                        String name = scanner.nextLine();
                         if (name.length() < 4) {
                             System.out.println("Ім'я недопустиме!");
                             break;
@@ -87,7 +89,7 @@ class Main {
                         name = toUpFirstChar(name);
 
                         System.out.print("Прізвище >> ");
-                        String lastName = new Scanner(System.in).nextLine();
+                        String lastName = scanner.nextLine();
                         if (lastName.length() < 4) {
                             System.out.println("Прізвище недопустиме!");
                             break;
@@ -98,13 +100,13 @@ class Main {
 
                         try {
                             System.out.print("Вага >> ");
-                            int weight = new Scanner(System.in).nextInt();
+                            int weight = scanner.nextInt();
                             System.out.print("Висота >> ");
-                            int height = new Scanner(System.in).nextInt();
+                            int height = scanner.nextInt();
 
                             System.out.println("Хабарник (1 - так, 2 - ні)");
                             System.out.print("Хабарник >> ");
-                            String briberScanner = new Scanner(System.in).nextLine();
+                            String briberScanner = scanner.nextLine();
                             boolean briber;
                             if (briberScanner.equalsIgnoreCase("1"))
                                 briber = true;
@@ -129,14 +131,14 @@ class Main {
                 case "7":
                     System.out.println("Вигнати депутата із фракції");
                     System.out.print("Введіть назву фракції >> ");
-                    String fractionName7 = new Scanner(System.in).nextLine();
+                    String fractionName7 = scanner.nextLine();
 
                     if(rada.checkFraction(fractionName7)) {
                         System.out.print("Введіть ім'я депутата >> ");
-                        String name = new Scanner(System.in).nextLine();
+                        String name = scanner.nextLine();
 
                         System.out.print("Введіть прізвище депутата >> ");
-                        String lastName = new Scanner(System.in).nextLine();
+                        String lastName = scanner.nextLine();
 
                         rada.removeDeputyFromFraction(fractionName7, name, lastName);
                     } else {
@@ -156,17 +158,16 @@ class Main {
                 case "0":
                     System.out.println("Дати хабаря");
                     System.out.println("Введіть ім'я >> ");
-                    String name = new Scanner(System.in).nextLine();
+                    String name = scanner.nextLine();
                     System.out.println("Введіть прізвище >> ");
-                    String lastName = new Scanner(System.in).nextLine();
+                    String lastName = scanner.nextLine();
                     if (!rada.checkDeputyIdentity(name, lastName)) {
                         System.out.println("Такого депутата не знайдено!");
                         break;
                     }
-
                     try {
                         System.out.print("Введіть суму хабаря >> ");
-                        int sum = new Scanner(System.in).nextInt();
+                        int sum = scanner.nextInt();
                         rada.giveBribe(name, lastName,sum);
                     } catch (Exception e) {
                         System.out.println("Не правильно введенечисло хабаря!");

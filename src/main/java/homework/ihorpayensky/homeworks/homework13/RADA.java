@@ -5,11 +5,24 @@ import java.util.Iterator;
 import java.util.List;
 
 class RADA {
+    private static RADA rada;
+
     private List<Fraction> fractions = new ArrayList<>();
 
     public List<Fraction> getFractions() {
         return fractions;
     }
+
+    // нідабле
+    private RADA(){}
+
+    public static RADA getRada() {
+        if (rada == null) {
+            return new RADA();
+        }
+        return rada;
+    }
+
 
     public void addFraction(String fraction) {
         boolean temp = true;
