@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Count01 {
     public static void count() {
-        System.out.println("Введіть речення");
+        System.out.println("Type Sentence");
         Scanner sc = new Scanner(System.in);
         StringBuffer countText = new StringBuffer(sc.nextLine());
         String countText1 = countText.toString();

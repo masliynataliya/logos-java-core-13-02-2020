@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CountText {
     public static void countText() {
-        System.out.println("Введіть речення");
+        System.out.println("Type text");
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
         text = text.replaceAll("[,.!:;?]", "");
@@ -18,7 +18,7 @@ public class CountText {
                 if (word.equalsIgnoreCase(word1)) {
                     i += 1;
                 } else {
-//                    System.out.println(word + " " + word1); перевірка слів
+//                    System.out.println(word + " " + word1);
                 }
             }
             if (valueOfWords < i) {

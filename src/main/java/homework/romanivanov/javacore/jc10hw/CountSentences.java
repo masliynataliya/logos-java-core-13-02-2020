@@ -1,40 +1,40 @@
 package homework.romanivanov.javacore.jc10hw;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
+import java.util.Scanner;
 
 public class CountSentences {
-    public static List<Count> countSentences(String text) {
-        HashSet<Count> wordCounter = new HashSet<>();
-        text = text.replaceAll("[,.!:;?]", "");
+    public static void countSentences() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Type sentence");
+        String text = sc.nextLine();
+        text = text.replaceAll("[,.!:;?]", " ");
         String[] words = text.split("\\s");
-        AtomicInteger maxWords = new AtomicInteger(0);
-        for (String word : words) {
-            int i = 0;
-            for (String word1 : words) {
-
-                if (word.equalsIgnoreCase(word1)) {
-                    i += 1;
-                } else {
-//                    System.out.println(word + " " + word1); перевірка слів
+        int maxWords = 0;
+        String word = null;
+        for (String value : words) {
+            int maxCount = 0;
+            String word2 = null;
+            for (String s : words) {
+                if (value.equals(s)) {
+                    maxCount++;
+                    word2 = value;
                 }
-
             }
-            if (maxWords.get()<i){
-                maxWords.addAndGet(i);
+            if (maxWords < maxCount) {
+                maxWords = maxCount;
+                word = word2;
             }
-            wordCounter.add(Count.createDefault().setWord(word).setCountWord(i));
-
-
         }
-        //stream = for; max=максимальний елемент порівнює з сусідніми елементами; orElse=звичайний else,
-        //якщо не існує такого об'єкту поверне orElse
-        return wordCounter.stream().filter(count -> count.getCountWord() == maxWords.get() && count.getCountWord() > 1)
-                .collect(Collectors.toList());
-        //filter = if; count - один елемент масиву(лямбда)
-        //(count -> count.getCountWord() == maxWords && count.getCountWord() > 1) лямбда вираз
-        //collect запускає все це і збирає в колекцію(збірку) //List - колекція
+        System.out.println("Слово яке найчастіше зустрічається - " + word + " Зустрічається стільки раз -" + maxWords);
+
     }
 }
+
+
+    //stream = for; max=максимальний елемент порівнює з сусідніми елементами; orElse=звичайний else,
+            //якщо не існує такого об'єкту поверне orElse
+            //filter = if; count - один елемент масиву(лямбда)
+            //(count -> count.getCountWord() == maxWords && count.getCountWord() > 1) лямбда вираз
+            //collect запускає все це і збирає в колекцію(збірку) //List - колекція
+
+
