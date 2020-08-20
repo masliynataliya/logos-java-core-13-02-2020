@@ -35,6 +35,7 @@ public class TaskMain {
                 System.out.println(car.toString());
                 cars.replaceAll(c -> car);
                 System.out.println();
+                break;
             default:
                 System.out.println("Такої опції не існує.");
         }
