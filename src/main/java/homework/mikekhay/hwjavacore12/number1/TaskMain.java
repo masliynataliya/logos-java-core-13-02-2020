@@ -11,7 +11,9 @@ public class TaskMain {
 
         System.out.println(cars.toString());
 
-        for(int i = 0; i < ((int) ( Math.random() * 5 )+2);i++){
+        int randomCarNumber  = ((int) ( Math.random() * 5 )+2);
+
+        for(int i = 0; i < randomCarNumber ;i++){
             cars.add(new Car());
         }
 

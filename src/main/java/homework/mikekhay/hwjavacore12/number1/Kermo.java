@@ -12,6 +12,11 @@ public class Kermo {
         else {material="Alcantara"; }
     }
 
+    public Kermo(int diameter, String material){
+        this.diameter = diameter;
+        this.material = material;
+    }
+
     public double getDiameter() {
         return diameter;
     }

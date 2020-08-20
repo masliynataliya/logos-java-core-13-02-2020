@@ -10,8 +10,8 @@ public class Car {
    public Car() {
       horsePower = 80 + (int) (Math.random() * 420);
       carRelease = 2000 + (int) (Math.random() * 20);
-      this.engine = engine;
-      this.kermo = kermo;
+      this.engine = new Engine();
+      this.kermo = new Kermo();
    }
 
    public int getHorsePower() {
