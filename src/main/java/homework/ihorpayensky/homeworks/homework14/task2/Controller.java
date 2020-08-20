@@ -102,7 +102,7 @@ class Controller implements CommodityControlImpl{
 
     @Override
     public void sortByWidth() {
-        commodityList.sort(new WeightComparator());
+        commodityList.sort(new WidthComparator());
         int i = 1;
         for (Commodity c: commodityList) {
             System.out.println(i + "\t| " + c.toString());

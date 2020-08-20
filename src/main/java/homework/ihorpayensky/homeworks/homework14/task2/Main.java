@@ -74,7 +74,7 @@ class Main {
                         System.out.println("List is empty...");
                         break;
                     }
-                    controller.sortByWidth();
+                    controller.sortByWeight();
                     System.out.println();
                     break;
                 case "6":
@@ -82,7 +82,7 @@ class Main {
                         System.out.println("List is empty...");
                         break;
                     }
-                    controller.sortByWeight();
+                    controller.sortByWidth();
                     System.out.println();
                     break;
                 case "7":
