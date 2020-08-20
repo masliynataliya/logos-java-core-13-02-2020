@@ -15,8 +15,8 @@ public class App {
         myMap.put("Sekh", 25);
         myMap.put("Morshinska", 27);
         myMap.put("Sekh", 27); //1 завдання
-//        myMap.removeByKey("Jepa"); //2 завдання
-//        myMap.removeByValue(27); ////3 завдання
+        myMap.removeByKey("Brest"); //2 завдання
+        myMap.removeByValue(27); ////3 завдання
         myMap.setKey(); //4 завдання
         myMap.listValue(); //5 завдання
         System.out.println(myMap.toString()); // 6 завдання
