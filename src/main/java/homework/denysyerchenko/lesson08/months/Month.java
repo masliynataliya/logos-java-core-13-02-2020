@@ -1,33 +1,33 @@
 package homework.denysyerchenko.lesson08.months;
 
 public enum Month {
-    JANUARY(31, Season.WINTER),
-    FEBRUARY(29, Season.WINTER),
-    MARCH(31, Season.SPRING),
-    APRIL(30, Season.SPRING),
-    MAY(31, Season.SPRING),
-    JUNE(30, Season.SUMMER),
-    JULY(31, Season.SUMMER),
-    AUGUST(31, Season.SUMMER),
-    SEPTEMBER(30, Season.FALL),
-    OCTOBER(31, Season.FALL),
-    NOVEMBER(30, Season.FALL),
-    DECEMBER(31, Season.WINTER);
+    JANUARY(31, Seasons.WINTER),
+    FEBRUARY(29, Seasons.WINTER),
+    MARCH(31, Seasons.SPRING),
+    APRIL(30, Seasons.SPRING),
+    MAY(31, Seasons.SPRING),
+    JUNE(30, Seasons.SUMMER),
+    JULY(31, Seasons.SUMMER),
+    AUGUST(31, Seasons.SUMMER),
+    SEPTEMBER(30, Seasons.FALL),
+    OCTOBER(31, Seasons.FALL),
+    NOVEMBER(30, Seasons.FALL),
+    DECEMBER(31, Seasons.WINTER);
 
     int numberOfDays;
-    Season season;
+    Seasons seasons;
 
     public int getNumberOfDays() {
         return numberOfDays;
     }
 
-    public Season getSeason() {
-        return season;
+    public Seasons getSeasons() {
+        return seasons;
     }
 
-    Month(int numberOfDays, Season season) {
+    Month(int numberOfDays, Seasons seasons) {
         this.numberOfDays = numberOfDays;
-        this.season = season;
+        this.seasons = seasons;
     }
 
 
