@@ -12,5 +12,6 @@ public class Main {
             cars.add(new Car());
         }
         System.out.println(cars);
+
     }
 }
