@@ -9,21 +9,28 @@ public class Commodity implements Comparable<Commodity> {
     private double productLenght;
     private double productWidth;
     private double productWeight;
-    HashSet<Commodity> hashSetCommodity = new HashSet<>();
+
 
     public Commodity() {
 
     }
 
+    public Commodity(String productName) {
+        this.productName = productName;
+    }
+
     public void addProduct() {
+        HashSet<Commodity> hashSetCommodity = new HashSet<>();
         hashSetCommodity.add(new Commodity(productName,productLenght,productWidth,productWeight));
     }
 
     public void removeProduct() {
+        HashSet<Commodity> hashSetCommodity = new HashSet<>();
         hashSetCommodity.remove(new Commodity(productName, productLenght, productWidth, productWeight));
     }
 
     public void changeProduct() {
+        HashSet<Commodity> hashSetCommodity = new HashSet<>();
         Scanner scanner = new Scanner(System.in);
         int scan = scanner.nextInt();
         ArrayList<Commodity> arrayListCommodity = new ArrayList<>(hashSetCommodity);
@@ -43,8 +50,7 @@ public class Commodity implements Comparable<Commodity> {
                 "productName='" + productName + '\'' +
                 ", productLenght=" + productLenght +
                 ", productWidth=" + productWidth +
-                ", productWeight=" + productWeight +
-                ", hashSetCommodity=" + hashSetCommodity +
+                ", productWeight=" + productWeight+
                 '}';
     }
 
