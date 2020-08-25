@@ -1,6 +1,6 @@
 package homework.ihorpayensky.homeworks.homework14.task2;
 
-public interface CommodityControlImpl {
+interface CommodityControlImpl {
 
     void getInfo();                                 // for information
     void addCommodity(Commodity commodity);         // 1
