@@ -20,7 +20,7 @@ public class Deputy extends People implements Comparable<Deputy>{
         this.name = name;
         this.age = age;
         this.bribe = bribe;
-        this.sizeBribe = 0;
+        sizeBribe = 0;
     }
 
     public void giveBribeDeputy(){

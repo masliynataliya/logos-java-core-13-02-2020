@@ -1,6 +1,6 @@
 package homework.mikekhay.hwjavacore13.number1;
 
-public class People {
+public abstract class People {
     private int weight;
     private int growth;
 

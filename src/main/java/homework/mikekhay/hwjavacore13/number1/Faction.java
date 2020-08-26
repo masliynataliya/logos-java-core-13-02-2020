@@ -10,7 +10,7 @@ public class Faction implements Comparable<Faction> {
     Scanner scanner = new Scanner(System.in);
 
     public Faction(String name) {
-        this.deputyList = new ArrayList<>();
+        deputyList = new ArrayList<>();
         this.name = name;
     }
 
@@ -37,20 +37,17 @@ public class Faction implements Comparable<Faction> {
         System.out.println("Даний депутат хабарник?");
         System.out.println("Введіть true або false?");
         deputy.setBribe(scanner.hasNextBoolean());
+        deputyList.add(deputy);
     }
 
-    public void deleteDeputy(String name) {
-        boolean a = true;
+    public void deleteDeputy(String surName) {
         Iterator<Deputy> deputyInteger = deputyList.iterator();
         while (deputyInteger.hasNext()) {
-            Deputy d = deputyInteger.next();
-            if (d.getName().equalsIgnoreCase(name)) {
-                deputyList.remove(d);
-                a = false;
+            Deputy deputy = deputyInteger.next();
+            if (deputy.getSurName().equalsIgnoreCase(surName)) {
+                deputyList.remove(deputy);
+                System.out.println("Депутата видалено.");
             }
-        }
-        if (a) {
-            System.out.println("Такого депутатат немає!!!");
         }
     }
 
@@ -62,6 +59,10 @@ public class Faction implements Comparable<Faction> {
         }
     }
 
+    public void clearDeputyList(){
+        deputyList.clear();
+    }
+
     public Deputy biggestBribe() {
         Deputy deputy = deputyList.get(0);
         for (Deputy a : deputyList) {
@@ -71,18 +72,8 @@ public class Faction implements Comparable<Faction> {
         }return deputy;
     }
 
-    public void allDeputiesFaction(){
-        for (Deputy a:deputyList) {
-            a.giveBribeDeputy();
-        }
-    }
-
     public ArrayList<Deputy> getDeputyList(){
         return deputyList;
-    }
-
-    public void clearDeputyList(){
-        deputyList.clear();
     }
 
     public String getName() {
@@ -92,8 +83,6 @@ public class Faction implements Comparable<Faction> {
     public void setName(String name) {
         this.name = name;
     }
-
-
 
     @Override
     public String toString() {
