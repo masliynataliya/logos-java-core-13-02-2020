@@ -22,12 +22,21 @@ public class AppDog {
         }
 
         System.out.println();
+        System.out.println("Sort Comparable");
         List<Dog> sortList = new ArrayList<>(dogs);
         sortList.sort(Dog::compareTo);
+
 
         Iterator<Dog> iterator1 = sortList.iterator();
         while (iterator1.hasNext()){
             System.out.println(iterator1.next());
+        }
+
+        sortList.sort(new SortComparator());
+        System.out.println();
+        System.out.println("Sort Comparator");
+        for (Dog dog: sortList){
+            System.out.println(dog);
         }
     }
 }

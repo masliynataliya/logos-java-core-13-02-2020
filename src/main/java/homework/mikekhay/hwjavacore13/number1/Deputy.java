@@ -11,7 +11,6 @@ public class Deputy extends People implements Comparable<Deputy>{
 
     public Deputy(int weight, int growth) {
         super(weight, growth);
-        sizeBribe=getSizeBribe();
     }
 
     public Deputy(int weight, int growth, String surName, String name, int age, boolean bribe) {

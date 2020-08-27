@@ -45,12 +45,10 @@ public class App {
         Method method = carClassa.getMethod("startTheCar");
         System.out.println(method);
         method.invoke(car);
-        car.startTheCar();
         System.out.println();
 
         Method method1 = carClassa.getDeclaredMethod("muteTheCar");
         method1.setAccessible(true);
         method1.invoke(car);
-        car.muteTheCar();
     }
 }

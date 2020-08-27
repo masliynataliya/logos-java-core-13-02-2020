@@ -1,5 +1,6 @@
 package homework.mikekhay.hwjavacore14;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Dog implements Comparable<Dog> {
@@ -11,6 +12,7 @@ public class Dog implements Comparable<Dog> {
         this.name = name;
         this.age = age;
     }
+
 
     public String getName() {
         return name;
@@ -66,10 +68,9 @@ public class Dog implements Comparable<Dog> {
             return -1;
         }
         else {
-            if(name1.compareTo(name2)!=0){
-                return name1.compareTo(name2);
-            }
-            else return 0;
+            return name1.compareTo(name2);
         }
     }
-}
+
+
+    }
