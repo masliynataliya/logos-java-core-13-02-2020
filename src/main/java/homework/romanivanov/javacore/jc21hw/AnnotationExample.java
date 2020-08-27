@@ -1,4 +1,4 @@
-package homework.romanivanov.jc21hw;
+package homework.romanivanov.javacore.jc21hw;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

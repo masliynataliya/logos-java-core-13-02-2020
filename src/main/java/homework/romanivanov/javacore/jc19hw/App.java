@@ -12,11 +12,10 @@ public class App {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Employee employee = new Employee("Roma", 1, 200);
         File file = new File("TestFile.txt");
-        Methods methods = new Methods();
-        methods.serialize(file,employee);
+        Methods.serialize(file,employee);
 //        employee = new Employee("Kek", 24,300);
         System.out.println();
-        methods.deserialize(file);
+        Methods.deserialize(file);
 
 
         List<Employee> employees = new ArrayList<>();
@@ -26,9 +25,9 @@ public class App {
         System.out.println();
 
         for (Employee employee1 : employees){
-            methods.serialize(file,employee1);
+            Methods.serialize(file,employee1);
             System.out.println();
-            methods.deserialize(file);
+            Methods.deserialize(file);
             System.out.println();
         }
 

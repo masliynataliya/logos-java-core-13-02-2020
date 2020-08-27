@@ -5,11 +5,13 @@ import java.util.*;
 import static homework.romanivanov.javacore.jc20hw.thread.Fibonachi.getNumbers;
 
 public class ThreadExample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         RunnableThread runnableThread = new RunnableThread();
-        runnableThread.run();
+        Thread thread = new Thread(runnableThread);
+        thread.start();
+        thread.join();
         MyThread myThread = new MyThread();
-        myThread.run();
+        myThread.start();
     }
 
 }
@@ -21,12 +23,15 @@ class MyThread extends Thread {
         System.out.println("Введіть скільки чисел ви хочете фібаночі переглянути");
         int size = sc.nextInt();
         List<Integer> fibonachi = getNumbers(size);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for (int i = 0; i < fibonachi.size(); i++) {
+            try {
+                Thread.sleep(1000);
+                System.out.println(fibonachi.get(i));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
         }
-        System.out.println(fibonachi.toString());
     }
 }
 
@@ -39,11 +44,13 @@ class RunnableThread implements Runnable {
         int size = sc.nextInt();
         List<Integer> fibonochiBack = getNumbers(size);
         Collections.reverse(fibonochiBack);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for (int i = 0; i < fibonochiBack.size(); i++) {
+            try {
+                Thread.sleep(1000);
+                System.out.println(fibonochiBack.get(i));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-        System.out.println(fibonochiBack.toString());
     }
 }
