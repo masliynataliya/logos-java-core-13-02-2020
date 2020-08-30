@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Replace {
     public static void replace() {
-        System.out.println("Введіть текст");
+        System.out.println("Type text");
         Scanner sc = new Scanner(System.in);
         StringBuffer text = new StringBuffer(sc.nextLine());
         String text1 = text.toString();
