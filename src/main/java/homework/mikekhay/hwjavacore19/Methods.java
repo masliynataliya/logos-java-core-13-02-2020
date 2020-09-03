@@ -12,10 +12,9 @@ public class Methods {
     }
 
     public static void deserealize(File file) throws IOException, ClassNotFoundException {
-        Employee employee = new Employee();
         FileInputStream fileInputStream = new FileInputStream(file);
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-        employee = (Employee) objectInputStream.readObject();
+        Employee employee = (Employee) objectInputStream.readObject();
         objectInputStream.close();
         fileInputStream.close();
         System.out.println(employee);

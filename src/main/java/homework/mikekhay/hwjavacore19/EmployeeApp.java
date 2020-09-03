@@ -9,9 +9,8 @@ public class EmployeeApp {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Employee employee = new Employee("Mike",1001,5500);
         File file = new File("src/main/java/homework/mikekhay/hwjavacore19.txt");
-        Methods methods = new Methods();
-        methods.serialize(file,employee);
-        methods.deserealize(file);
+        Methods.serialize(file,employee);
+        Methods.deserealize(file);
         System.out.println();
 
         List<Employee> emp = new LinkedList<>();
@@ -22,8 +21,8 @@ public class EmployeeApp {
         emp.add(new Employee("Nazar",1004,4500));
 
         for (Employee e: emp) {
-            methods.serialize(file,e);
-            methods.deserealize(file);
+            Methods.serialize(file,e);
+            Methods.deserealize(file);
         }
 
     }
