@@ -1,7 +1,5 @@
 package homework.ihorpayensky.homeworks.homework23.min;
 
-import homework.ihorpayensky.homeworks.homework19.Methods;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
