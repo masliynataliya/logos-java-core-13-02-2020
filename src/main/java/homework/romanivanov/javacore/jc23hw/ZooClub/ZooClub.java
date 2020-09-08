@@ -46,8 +46,7 @@ public class ZooClub {
             namePerson.forEach(person -> {
                         System.out.println("Введіть ім'я тваринки яку хочете видалити");
                         String name1 = sc.next();
-                        boolean b = map.get(person)
-                                .removeIf(animal -> animal.getName().equalsIgnoreCase(name1));
+                        boolean b = map.get(person).removeIf(animal -> animal.getName().equalsIgnoreCase(name1));
                         if (!b) {
                             System.out.println("Такої тваринки не існує");
                         }
