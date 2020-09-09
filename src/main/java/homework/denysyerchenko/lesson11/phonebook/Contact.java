@@ -1,4 +1,4 @@
-package homework.denysyerchenko.lesson11;
+package homework.denysyerchenko.lesson11.phonebook;
 
 public class Contact {
     private String contactName;

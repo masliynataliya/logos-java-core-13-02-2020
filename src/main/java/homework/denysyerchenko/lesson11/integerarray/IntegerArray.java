@@ -1,4 +1,4 @@
-package homework.denysyerchenko.lesson11;
+package homework.denysyerchenko.lesson11.integerarray;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package homework.denysyerchenko.lesson11;
+package homework.denysyerchenko.lesson11.cars;
 
 import java.util.Random;
 

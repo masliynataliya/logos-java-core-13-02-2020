@@ -1,7 +1,8 @@
-package homework.denysyerchenko.lesson11;
+package homework.denysyerchenko.lesson11.cars;
+
+import homework.denysyerchenko.lesson11.cars.Car;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class CarApp {
     public static void main(String[] args) {
