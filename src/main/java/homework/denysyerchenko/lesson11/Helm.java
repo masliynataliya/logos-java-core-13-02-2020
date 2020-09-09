@@ -6,16 +6,16 @@ public class Helm {
     private int helmDiameter;
     private String helmMaterial;
 
-    public Helm(int helmDiameter, String helmMaterial) {
-        Random random1 = new Random();
-        helmDiameter = random1.nextInt((50 - 30) + 1);
-        helmMaterial = helmMaterial;
-        Random random2 = new Random();
-        int randomNum = random2.nextInt((2 - 1) + 1);
+    public Helm() {
+        Random random3 = new Random();
+        this.helmDiameter = random3.nextInt((50-30)+1)+30;
+        this.helmMaterial = helmMaterial;
+        Random random4 = new Random();
+        int randomNum = random4.nextInt((2-1)+1)+1;
         if (randomNum == 2) {
-            helmMaterial.equals("leather");
+            helmMaterial = "leather";
         } else {
-            helmMaterial.equals("alcantara");
+            helmMaterial = "alcantara";
         }
     }
 
@@ -37,9 +37,7 @@ public class Helm {
 
     @Override
     public String toString() {
-        return "Helm{" +
-                "helmDiameter=" + helmDiameter +
-                ", helmMaterial='" + helmMaterial + '\'' +
-                '}';
+        return "diameter: " + helmDiameter +
+                ", material: " + helmMaterial;
     }
 }

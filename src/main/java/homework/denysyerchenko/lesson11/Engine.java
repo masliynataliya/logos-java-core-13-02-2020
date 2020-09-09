@@ -5,9 +5,9 @@ import java.util.Random;
 public class Engine {
     private int numberOfCylinders;
 
-    public Engine(int numberOfCylinders) {
-        Random random3 = new Random();
-        this.numberOfCylinders = random3.nextInt((12 - 4) + 1);
+    public Engine() {
+        Random random5 = new Random();
+        this.numberOfCylinders = random5.nextInt((12 - 4) + 1);
     }
 
     public int getNumberOfCylinders() {
@@ -20,8 +20,6 @@ public class Engine {
 
     @Override
     public String toString() {
-        return "Engine{" +
-                "numberOfCylinders=" + numberOfCylinders +
-                '}';
+        return "number of cylinders: " + numberOfCylinders;
     }
 }

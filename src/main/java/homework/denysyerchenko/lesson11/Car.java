@@ -9,11 +9,12 @@ public class Car {
    private Engine engine;
 
     public Car() {
-        Random random = new Random();
-        horsePowers = random.nextInt(((850 - 200) + 1) + 200);
-        yearOfManufacture = random.nextInt(((2019 - 1989) +1) + 1989);
-        this.helm = helm;
-        this.engine = engine;
+        Random random1 = new Random();
+        horsePowers = random1.nextInt((850-150)+1)+150;
+        Random random2 = new Random();
+        yearOfManufacture = random2.nextInt((2019-1985)+1)+1985;
+        this.helm = new Helm();
+        this.engine = new Engine();
     }
 
     public int getHorsePowers() {
@@ -50,11 +51,10 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "horsePowers= " + horsePowers +
-                ", yearOfManufacture='" + yearOfManufacture + '\'' +
-                ", helm=" + helm +
-                ", engine=" + engine +
-                '}';
+        return "Car: " +
+                "horse powers: " + horsePowers +
+                ", year of manufacture: " + yearOfManufacture +
+                "; helm: " + helm +
+                "; engine: " + engine;
     }
 }
