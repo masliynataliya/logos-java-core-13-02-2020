@@ -14,6 +14,9 @@ public class CarApp {
         Car car6 = new Car();
         Car [][] cars = {{car1,car2,car3},{car4,car5,car6}};
         System.out.println(Arrays.deepToString(cars));
+        for (Car[] row : cars)
+            Arrays.fill(row, car1);
+        System.out.println(Arrays.deepToString(cars));
 
     }
 }
