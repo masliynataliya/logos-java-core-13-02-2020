@@ -1,7 +1,4 @@
 package homework.denysyerchenko.lesson11.cars;
-
-import homework.denysyerchenko.lesson11.cars.Car;
-
 import java.util.Arrays;
 
 public class CarApp {
@@ -15,8 +12,8 @@ public class CarApp {
         Car [][] cars = {{car1,car2,car3},{car4,car5,car6}};
         System.out.println(Arrays.deepToString(cars));
         for (Car[] row : cars)
-            Arrays.fill(row, car1);
+        Arrays.fill(row, car1);
         System.out.println(Arrays.deepToString(cars));
 
+        }
     }
-}
