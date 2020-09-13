@@ -36,9 +36,9 @@ public class MonthApp {
                 System.out.println("Enter desired month");
                 String desiredMonth2 = monthScanner.nextLine();
                 Month month2 = Month.valueOf(desiredMonth2.toUpperCase());
-                Season s = month2.getSeason();
+                Seasons s = month2.getSeasons();
                 for (int counter2 = 0; counter2 < months.length; counter2++) {
-                    if (s.equals(months[counter2].getSeason())) {
+                    if (s.equals(months[counter2].getSeasons())) {
                         System.out.println(months[counter2]);
                     }
                 }
@@ -81,23 +81,23 @@ public class MonthApp {
                 System.out.println("Enter desired month");
                 String desiredMonth6 = monthScanner.nextLine();
                 Month month6 = Month.valueOf(desiredMonth6.toUpperCase());
-                Season ns = month6.getSeason();
+                Seasons ns = month6.getSeasons();
                 for (int counter6 = 0; counter6 < months.length; counter6++) {
-                    if (ns.equals(months[counter6].getSeason())) {
-                        if (months[counter6].getSeason().equals(Season.WINTER)) {
-                            System.out.println(Season.SPRING);
+                    if (ns.equals(months[counter6].getSeasons())) {
+                        if (months[counter6].getSeasons().equals(Seasons.WINTER)) {
+                            System.out.println(Seasons.SPRING);
                             break;
                         }
-                        if (months[counter6].getSeason().equals(Season.SPRING)) {
-                            System.out.println(Season.SUMMER);
+                        if (months[counter6].getSeasons().equals(Seasons.SPRING)) {
+                            System.out.println(Seasons.SUMMER);
                             break;
                         }
-                        if (months[counter6].getSeason().equals(Season.SUMMER)) {
-                            System.out.println(Season.FALL);
+                        if (months[counter6].getSeasons().equals(Seasons.SUMMER)) {
+                            System.out.println(Seasons.FALL);
                             break;
                         }
-                        if (months[counter6].getSeason().equals(Season.FALL)) {
-                            System.out.println(Season.WINTER);
+                        if (months[counter6].getSeasons().equals(Seasons.FALL)) {
+                            System.out.println(Seasons.WINTER);
                             break;
                         }
                     }
@@ -106,23 +106,23 @@ public class MonthApp {
                 System.out.println("Enter desired month");
                 String desiredMonth7 = monthScanner.nextLine();
                 Month month7 = Month.valueOf(desiredMonth7.toUpperCase());
-                Season ps = month7.getSeason();
+                Seasons ps = month7.getSeasons();
                 for (int counter7 = 0; counter7 < months.length; counter7++) {
-                    if (ps.equals(months[counter7].getSeason())) {
-                        if (months[counter7].getSeason().equals(Season.WINTER)) {
-                            System.out.println(Season.FALL);
+                    if (ps.equals(months[counter7].getSeasons())) {
+                        if (months[counter7].getSeasons().equals(Seasons.WINTER)) {
+                            System.out.println(Seasons.FALL);
                             break;
                         }
-                        if (months[counter7].getSeason().equals(Season.SPRING)) {
-                            System.out.println(Season.WINTER);
+                        if (months[counter7].getSeasons().equals(Seasons.SPRING)) {
+                            System.out.println(Seasons.WINTER);
                             break;
                         }
-                        if (months[counter7].getSeason().equals(Season.SUMMER)) {
-                            System.out.println(Season.SPRING);
+                        if (months[counter7].getSeasons().equals(Seasons.SUMMER)) {
+                            System.out.println(Seasons.SPRING);
                             break;
                         }
-                        if (months[counter7].getSeason().equals(Season.FALL)) {
-                            System.out.println(Season.SUMMER);
+                        if (months[counter7].getSeasons().equals(Seasons.FALL)) {
+                            System.out.println(Seasons.SUMMER);
                             break;
                         }
                     }
