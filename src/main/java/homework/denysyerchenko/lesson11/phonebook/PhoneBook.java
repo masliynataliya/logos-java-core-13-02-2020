@@ -1,4 +1,4 @@
-package homework.denysyerchenko.lesson11;
+package homework.denysyerchenko.lesson11.phonebook;
 
 import java.util.ArrayList;
 import java.util.Scanner;
