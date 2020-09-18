@@ -4,48 +4,68 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Fraction {
+    private String fractionName;
     private ArrayList <Deputy> deputyArrayList;
 
-     public void addDeputy() {
+    public Fraction() {
+    }
+
+    public Fraction(String fractionName) {
+        this.fractionName = fractionName;
+    }
+
+    public String getFractionName() {
+        return fractionName;
+    }
+
+    public ArrayList<Deputy> getDeputyArrayList() {
+        return deputyArrayList;
+    }
+
+    public void setFractionName(String fractionName) {
+        this.fractionName = fractionName;
+    }
+
+    public void addDeputy() {
          Deputy deputy = new Deputy();
-         Scanner newDeputyScanner = new Scanner(System.in);
+         Scanner scanner = new Scanner(System.in);
          System.out.println("Enter deputy's surname");
-         deputy.setSurname(newDeputyScanner.next());
+         deputy.setSurname(scanner.next());
          System.out.println("Enter deputy's name");
-         deputy.setName(newDeputyScanner.next());
+         deputy.setName(scanner.next());
          System.out.println("Enter deputy's age");
-         deputy.setAge(newDeputyScanner.nextInt());
+         deputy.setAge(scanner.nextInt());
          System.out.println("Is the deputy a briber?");
-         deputy.setBriber(newDeputyScanner.nextBoolean());
+         deputy.setBriber(scanner.nextBoolean());
          System.out.println("Enter deputy's height");
-         deputy.setHeight(newDeputyScanner.nextInt());
+         deputy.setHeight(scanner.nextInt());
          System.out.println("Enter deputy's weight");
-         deputy.setWeight(newDeputyScanner.nextInt());
+         deputy.setWeight(scanner.nextInt());
          deputyArrayList.add(deputy);
      }
      public void removeDeputy() {
-         System.out.println("Enter the deputy's surname");
-         Scanner removingDeputyScanner = new Scanner(System.in);
-         String deputyToRemove = removingDeputyScanner.next();
-         for (int d = 0; d < deputyArrayList.size(); d++) {
-             if (deputyToRemove.equalsIgnoreCase(deputyArrayList.get(d).getSurname())) {
-                 deputyArrayList.remove(d);
+         System.out.println("Enter deputy's surname");
+         Scanner scanner = new Scanner(System.in);
+         String deputyToRemove = scanner.next();
+         for (int i = 0; i < deputyArrayList.size(); i++) {
+             if (deputyToRemove.equalsIgnoreCase(deputyArrayList.get(i).getSurname())) {
+                 deputyArrayList.remove(i);
              } else {
                  System.out.println("This surname wasn't found");
              }
          }
      }
      public void showAllBribers() {
-         for (int d2 = 0; d2 < deputyArrayList.size(); d2++) {
-             if (deputyArrayList.get(d2).isBriber() == true) {
-                 System.out.println(deputyArrayList.get(d2));
+         for (int i = 0; i < deputyArrayList.size(); i++) {
+             if (deputyArrayList.get(i).isBriber() == true) {
+                 System.out.println(deputyArrayList.get(i));
              }
          }
      }
      public void showWorstBriber() {
          Deputy worstBriber = deputyArrayList.get(0);
-         for (int d3 = 0; d3 < deputyArrayList.size(); d3++) {
-             Deputy currentBriber = deputyArrayList.get(d3);
+         for (int i = 0; i < deputyArrayList.size(); i++) {
+             Deputy currentBriber = deputyArrayList.get(i);
              if (currentBriber.getBribe() > worstBriber.getBribe()) {
                  currentBriber = worstBriber;
              }
@@ -53,7 +73,7 @@ public class Fraction {
          System.out.println(worstBriber);
      }
      public void showAllDeputies() {
-         System.out.println(deputyArrayList);
+        System.out.println(deputyArrayList);
      }
      public void removeAllDeputies() {
          deputyArrayList.removeAll(deputyArrayList);
