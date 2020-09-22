@@ -59,6 +59,8 @@ public class Fraction {
          for (int i = 0; i < deputyArrayList.size(); i++) {
              if (deputyArrayList.get(i).isBriber() == true) {
                  System.out.println(deputyArrayList.get(i));
+             } else {
+                 System.out.println("No bribers were found");
              }
          }
      }

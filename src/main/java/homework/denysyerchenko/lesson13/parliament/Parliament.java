@@ -6,6 +6,8 @@ import java.util.Scanner;
 public final class Parliament {
     private static Parliament instance;
 
+
+
     private Parliament() {
 
     }
@@ -15,6 +17,10 @@ public final class Parliament {
             instance = new Parliament();
         }
         return instance;
+    }
+
+    public ArrayList<Fraction> getFractionArrayList() {
+        return fractionArrayList;
     }
 
     private ArrayList<Fraction> fractionArrayList;
@@ -34,7 +40,7 @@ public final class Parliament {
             if (fractionToRemove.equalsIgnoreCase(fractionArrayList.get(i).getFractionName())) {
                 fractionArrayList.remove(i);
             } else {
-                System.out.println("This fraction's name wasn't found");
+                System.out.println("This fraction wasn't found");
             }
         }
     }
@@ -50,6 +56,8 @@ public final class Parliament {
         for (int i = 0; i < fractionArrayList.size(); i++) {
             if (fractionToShow.equalsIgnoreCase(fractionArrayList.get(i).getFractionName())) {
                 System.out.println(fractionArrayList.get(i));
+            } else {
+                System.out.println("This fraction wasn't found");
             }
         }
     }
@@ -61,6 +69,8 @@ public final class Parliament {
         for (int i = 0; i < fractionArrayList.size(); i++) {
             if (desiredFraction.equalsIgnoreCase(fractionArrayList.get(i).getFractionName())) {
                 fractionArrayList.get(i).addDeputy();
+            } else {
+                System.out.println("This fraction wasn't found");
             }
         }
     }
@@ -91,6 +101,8 @@ public final class Parliament {
             Fraction targetFraction2 = fractionArrayList.get(i);
             if (targetFraction2.getFractionName().equalsIgnoreCase(desFract)) {
                 targetFraction2.showAllBribers();
+            } else {
+                System.out.println("This fraction wasn't found");
             }
 
         }
@@ -104,6 +116,8 @@ public final class Parliament {
             Fraction targetFraction3 = fractionArrayList.get(i);
             if (targetFraction3.getFractionName().equalsIgnoreCase(desFract2)) {
                 targetFraction3.showWorstBriber();
+            } else {
+                System.out.println("This fraction wasn't found");
             }
         }
     }
@@ -116,6 +130,8 @@ public final class Parliament {
             Fraction targetFraction4 = fractionArrayList.get(i);
             if (targetFraction4.getFractionName().equalsIgnoreCase(desFract3)) {
                 targetFraction4.showAllDeputies();
+            } else {
+                System.out.println("This fraction wasn't found");
             }
         }
     }
