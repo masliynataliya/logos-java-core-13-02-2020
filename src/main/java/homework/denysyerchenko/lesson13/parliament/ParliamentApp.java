@@ -14,7 +14,7 @@ public class ParliamentApp {
             System.out.println("Press 3 to show all fractions");
             System.out.println("Press 4 do remove all deputies from the certain fraction");
             System.out.println("Press 5 to show the certain fraction");
-            System.out.println("Press 6 to add a deputy to the certain fraction ");
+            System.out.println("Press 6 to add a deputy to the certain fraction");
             System.out.println("Press 7 to exit the app");
 
             Scanner scanner = new Scanner(System.in);
@@ -48,7 +48,7 @@ public class ParliamentApp {
                     break;
                 case 6:
                     parliament.addDeputyToCertainFraction();
-                    System.out.println("The deputy has been added");
+                    System.out.println("The deputy has been added to the fraction");
                     break;
                 case 7:
                     System.exit(0);

@@ -23,7 +23,7 @@ public final class Parliament {
         return fractionArrayList;
     }
 
-    private ArrayList<Fraction> fractionArrayList;
+    private ArrayList<Fraction> fractionArrayList = new ArrayList<>();
 
     public void addFraction() {
         Fraction fraction = new Fraction();
