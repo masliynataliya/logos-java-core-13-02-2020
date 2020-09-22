@@ -30,6 +30,7 @@ public final class Parliament {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter fraction's name");
         fraction.setFractionName(scanner.next());
+        fractionArrayList.add(fraction);
     }
 
     public void removeFraction() {

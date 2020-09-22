@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Fraction {
     private String fractionName;
-    private ArrayList <Deputy> deputyArrayList;
+    private ArrayList <Deputy> deputyArrayList = new ArrayList<>();
 
     public Fraction() {
     }
