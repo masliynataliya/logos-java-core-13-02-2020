@@ -81,4 +81,12 @@ public class Fraction {
          deputyArrayList.removeAll(deputyArrayList);
          System.out.println("All deputies have been removed");
      }
+
+    @Override
+    public String toString() {
+        return "Fraction{" +
+                "fractionName='" + fractionName + '\'' +
+                ", deputyArrayList=" + deputyArrayList +
+                '}';
+    }
 }

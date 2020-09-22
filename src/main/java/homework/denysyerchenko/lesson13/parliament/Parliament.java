@@ -136,4 +136,11 @@ public final class Parliament {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "Parliament{" +
+                "fractionArrayList=" + fractionArrayList +
+                '}';
+    }
 }
