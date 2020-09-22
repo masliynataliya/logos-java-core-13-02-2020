@@ -65,8 +65,8 @@ public class Deputy extends Man {
             System.out.println("This deputy is not a briber");
         } if (isBriber) {
             System.out.println("Enter the bribe's amount");
-            Scanner bribeScanner = new Scanner(System.in);
-            int bribeAmount = bribeScanner.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            int bribeAmount = scanner.nextInt();
             if (bribeAmount <= 5000) {
                 bribe = bribeAmount;
             } else {

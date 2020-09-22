@@ -12,9 +12,10 @@ public class ParliamentApp {
             System.out.println("Press 1 to add a new fraction");
             System.out.println("Press 2 to remove the certain fraction");
             System.out.println("Press 3 to show all fractions");
-            System.out.println("Press 4 do remove all deputies from certain fraction");
+            System.out.println("Press 4 do remove all deputies from the certain fraction");
             System.out.println("Press 5 to show the certain fraction");
-            System.out.println("Press 6 to exit the app");
+            System.out.println("Press 6 to add a deputy to the certain fraction ");
+            System.out.println("Press 7 to exit the app");
 
             Scanner scanner = new Scanner(System.in);
             int desOption = scanner.nextInt();
@@ -46,6 +47,10 @@ public class ParliamentApp {
                     parliament.showCertainFraction();
                     break;
                 case 6:
+                    parliament.addDeputyToCertainFraction();
+                    System.out.println("The deputy has been added");
+                    break;
+                case 7:
                     System.exit(0);
             }
         }
