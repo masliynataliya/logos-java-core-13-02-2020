@@ -60,10 +60,10 @@ public class Deputy extends Man {
         this.bribe = bribe;
     }
 
-    public void payABribe(boolean isBriber) {
-        if (false) {
+    public void payABribe() {
+        if (!isBriber) {
             System.out.println("This deputy is not a briber");
-        } if (true) {
+        } if (isBriber) {
             System.out.println("Enter the bribe's amount");
             Scanner bribeScanner = new Scanner(System.in);
             int bribeAmount = bribeScanner.nextInt();
