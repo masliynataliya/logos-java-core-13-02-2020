@@ -1,8 +1,4 @@
 package homework.denysyerchenko.lesson14.foxeslist;
-
-import com.sun.source.tree.Tree;
-
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.TreeSet;
 
