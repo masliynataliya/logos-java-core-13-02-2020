@@ -4,6 +4,9 @@ public class Person {
     private String personName;
     private int personAge;
 
+    public Person() {
+    }
+
     public Person(String personName, int personAge) {
         this.personName = personName;
         this.personAge = personAge;

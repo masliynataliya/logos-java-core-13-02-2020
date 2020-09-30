@@ -4,6 +4,9 @@ public class Animal {
     private String animalType;
     private String animalName;
 
+    public Animal() {
+    }
+
     public Animal(String animalType, String animalName) {
         this.animalType = animalType;
         this.animalName = animalName;
