@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ZooClub {
-    static Map <Person, List <Animal>> map = new HashMap<>();
+    private static Map <Person, List <Animal>> map = new HashMap<>();
 
     public ZooClub() {
     }
@@ -17,4 +17,6 @@ public class ZooClub {
     public static Map<Person, List<Animal>> getMap() {
         return map;
     }
+
+
 }

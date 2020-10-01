@@ -27,4 +27,12 @@ public class Animal {
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "animalType='" + animalType + '\'' +
+                ", animalName='" + animalName + '\'' +
+                '}';
+    }
 }

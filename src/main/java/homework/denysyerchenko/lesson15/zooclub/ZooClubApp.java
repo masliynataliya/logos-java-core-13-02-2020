@@ -4,6 +4,7 @@ import java.util.*;
 
 public class ZooClubApp {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         while (true) {
 
@@ -16,7 +17,6 @@ public class ZooClubApp {
             System.out.println("Press 6 to show all members");
             System.out.println("Press 7 close ZooClub app");
 
-            Scanner scanner = new Scanner(System.in);
             int option = scanner.nextInt();
 
             switch (option) {
@@ -34,14 +34,13 @@ public class ZooClubApp {
                     System.out.println("Enter animal's name");
                     membersAnimal.setAnimalName(scanner.next());
                     animalsList.add(membersAnimal);
-                    newZooClub.map.put(member, animalsList);
+                    newZooClub.getMap().put(member, animalsList);
                     System.out.println("The member has been added successfully");
                     break;
                 case 2:
                     System.out.println("Enter member's name");
-                    Scanner scanner2 = new Scanner(System.in);
-                    String desiredMember = scanner2.next();
-                    for (Map.Entry<Person, List <Animal>> entry : ZooClub.getMap().entrySet()) {
+                    String desiredMember = scanner.next();
+                    for (Map.Entry<Person, List<Animal>> entry : ZooClub.getMap().entrySet()) {
                         Person currentMember = entry.getKey();
                         List currentMemberAnimalsList = entry.getValue();
                         if (currentMember.getPersonName().equalsIgnoreCase(desiredMember)) {
@@ -52,11 +51,61 @@ public class ZooClubApp {
                             newAnimal.setAnimalName(scanner.next());
                             currentMemberAnimalsList.add(newAnimal);
                             System.out.println("The new animal has been added");
-                            break;
                         }
                     }
-
+                    break;
+                case 3:
+                    System.out.println("Enter member's name");
+                    String desiredMember2 = scanner.next();
+                    for (Map.Entry<Person, List<Animal>> entry : ZooClub.getMap().entrySet()) {
+                        Person currentMember2 = entry.getKey();
+                        List currentMemberAnimalsList2 = entry.getValue();
+                        if (currentMember2.getPersonName().equalsIgnoreCase(desiredMember2)) {
+                            System.out.println("Enter animal's name");
+                            String animalToRemove = scanner.next();
+                            ListIterator<Animal> iterator = currentMemberAnimalsList2.listIterator();
+                            while (iterator.hasNext()) {
+                                if (iterator.next().getAnimalName().equalsIgnoreCase(animalToRemove)) {
+                                    iterator.remove();
+                                }
+                            }
+                            System.out.println("The animal has been removed");
+                        }
+                    }
+                    break;
+                case 4:
+                    System.out.println("Enter member's name");
+                    String desiredMember3 = scanner.next();
+                    for (Map.Entry<Person, List<Animal>> entry : ZooClub.getMap().entrySet()) {
+                        Person currentMember3 = entry.getKey();
+                        if (currentMember3.getPersonName().equalsIgnoreCase(desiredMember3)) {
+                            ZooClub.getMap().remove(currentMember3);
+                        }
+                    }
+                    System.out.println("The member has been removed");
+                    break;
+                case 5:
+                    System.out.println("Enter animal's type");
+                    String desiredAnimal = scanner.next();
+                    for (Map.Entry<Person, List<Animal>> entry : ZooClub.getMap().entrySet()) {
+                        List currentMemberAnimalsList3 = entry.getValue();
+                        ListIterator<Animal> iterator2 = currentMemberAnimalsList3.listIterator();
+                        while (iterator2.hasNext()) {
+                            if (iterator2.next().getAnimalType().equalsIgnoreCase(desiredAnimal)) {
+                                iterator2.remove();
+                            }
+                        }
+                    }
+                    System.out.println("The animal has been removed");
+                    break;
+                case 6:
+                    System.out.println(ZooClub.getMap().toString());
+                    break;
+                case 7:
+                    System.out.println("Closing ZooAClub app");
+                    System.exit(1);
             }
         }
     }
 }
+
