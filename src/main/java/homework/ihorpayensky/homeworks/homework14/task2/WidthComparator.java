@@ -7,7 +7,7 @@ class WidthComparator implements Comparator<Commodity> {
     public int compare(Commodity o1, Commodity o2) {
         if (o1.getWidth() == o2.getWidth())
             return 0;
-        if (o1.getWidth() < o2.getWidth())
+        if (o1.getWidth() > o2.getWidth())
             return 1;
         return -1;
     }

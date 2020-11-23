@@ -1,7 +1,5 @@
 package homework.ihorpayensky.homeworks.homework14.task2;
 
-import java.util.Comparator;
-
 class Commodity implements Comparable<Commodity> {
     private String name;
     private int width;
